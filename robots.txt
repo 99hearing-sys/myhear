@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://myhear.pages.dev/sitemap.xml
