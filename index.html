@@ -73,7 +73,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:16px;transition:font-size 0.2s;}
-body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.75;font-size:1rem;font-weight:500;letter-spacing:-0.01em;overflow-x:hidden;position:relative;transition:background 0.3s, color 0.3s;}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.78;font-size:1rem;font-weight:500;letter-spacing:-0.003em;overflow-x:hidden;position:relative;transition:background 0.3s, color 0.3s;}
 
 /* === 글자 크기 조절 (시니어·난독증 친화) === */
 html[data-fontsize="large"]{font-size:19px !important;}
@@ -210,8 +210,8 @@ img{max-width:100%;display:block;}
   section[style*="padding:100px 0"]{padding:60px 0 !important;}
   .features-section, .shop-section{padding:60px 0 !important;}
   
-  /* 본문 폰트 가독성 보장 */
-  body{font-size:15px;line-height:1.65;}
+  /* 본문 폰트 가독성 보장 (v18 · 시니어 친화 미세 조정) */
+  body{font-size:15.5px;line-height:1.72;letter-spacing:0;}
   
   /* 🩺 작은 글씨 시니어 가독성 보장 (v16.2) */
   [style*="font-size:11px"]:not(.mobile-toggle):not(.f-chip){font-size:12.5px !important;}
@@ -997,42 +997,14 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
     </a>
     <div class="nav-menu">
       <div class="nav-item">
-        <a href="#about">About <span class="nav-caret"></span></a>
+        <a href="#start">👋 Start <span class="nav-caret"></span></a>
         <div class="nav-drop">
-          <a href="#start">👋 Start Here<span>처음이신가요? 여기부터</span></a>
-          <a href="#about">비전 · 미션<span>7년 → 7분</span></a>
-          <a href="#about">Day 1 Traction<span>이미 가진 자산</span></a>
-          <a href="#about">4대 차별화<span>Shop·Test·Bid·Auto</span></a>
-          <a href="#about">창업자 김진영<span>청각학 15년</span></a>
-          <a href="#revenue">💰 수익 모델 · 사업계획<span>5대 수익원·TAM 1.2조</span></a>
-          <a href="#about">🏆 투자 제안<span>프리-시드 진행 중</span></a>
-        </div>
-      </div>
-      <div class="nav-item">
-        <a href="#features">Features <span class="nav-caret"></span></a>
-        <div class="nav-drop">
-          <a href="#features">전체 21개 기능 지도<span>LIVE·개발중 한눈에</span></a>
-          <a href="#features">Hearing Aids<span>6대 브랜드 · FDA/CE</span></a>
-          <a href="#features">Subsidy Calc<span>131만원 · 국민건강보험법</span></a>
-          <a href="#features">Rehab<span>대한청각학회 · 6·8·12주</span></a>
-          <a href="#features">Center DB<span>심평원 · 접근성 6필터</span></a>
-          <a href="#features">Hearing Test<span>ISO 8253 · 순음 역치</span></a>
-          <a href="#features">Sound Field<span>HINT/QuickSIN ★ 킬러</span></a>
-          <a href="#features">AI Match<span>ASHA + NAL-NL2</span></a>
-          <a href="#features">Simulator<span>ISO 7029 · 4단계</span></a>
-          <a href="#features">Serenity<span>NIOSH · NRR 인증 6종</span></a>
-          <a href="#features">Cochlear<span>PTA 70dB+ 적응</span></a>
-          <a href="#features">Prescription OCR<span>처방전 자동 매칭</span></a>
-          <a href="#features">AI Visual Match<span>Gemini 귀 합성</span></a>
-          <a href="#features">Shop Catalog<span>20 모델 필터·시세</span></a>
-          <a href="#features">Reviews<span>실명 인증·4카테고리</span></a>
-          <a href="#features">Rankings<span>주간 관심도</span></a>
-          <a href="#features">Content Hub<span>하루 15개 큐레이션</span></a>
-          <a href="#features">Community<span>업계의 LinkedIn</span></a>
-          <a href="#features">YouTube 500<span>45,600 구독</span></a>
-          <a href="#features">Bidding<span>체험·구매 역경매</span></a>
-          <a href="#features">A11Y<span>글자·다크·고대비</span></a>
-          <a href="#features">Auto Platform<span>n8n · 자율 운영</span></a>
+          <a href="#start">처음 오셨나요?<span>4가지 경로 안내</span></a>
+          <a href="#tools">잘 안 들려요<span>자가검사 4종 · 5분</span></a>
+          <a href="#soundfield-deep">이미 쓰고 있어요<span>음장검사 재점검</span></a>
+          <a href="#price">모델 고르고 있어요<span>쇼핑몰 카탈로그</span></a>
+          <a href="#tools">부모님 알아봐요<span>시뮬레이터 체험</span></a>
+          <a href="#about">사업 관심있어요<span>투자자 · 파트너</span></a>
         </div>
       </div>
       <div class="nav-item">
@@ -1074,15 +1046,6 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
         </div>
       </div>
       <div class="nav-item">
-        <a href="#academy">Content <span class="nav-caret"></span></a>
-        <div class="nav-drop">
-          <a href="#academy">Content Hub<span>하루 15개 대규모 발행</span></a>
-          <a href="#youtube">유튜브 500편<span>45,600 구독</span></a>
-          <a href="#academy">학술 아카이빙<span>논문·학회 쉬운말</span></a>
-          <a href="#community">커뮤니티<span>업계의 LinkedIn</span></a>
-        </div>
-      </div>
-      <div class="nav-item">
         <a href="#serenity">Serenity <span class="nav-caret"></span></a>
         <div class="nav-drop">
           <a href="#serenity">Music<span>음악가 · 콘서트</span></a>
@@ -1093,28 +1056,67 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
           <a href="#serenity">Work<span>공장 · 작업장</span></a>
         </div>
       </div>
+      <div class="nav-item">
+        <a href="#academy">Content <span class="nav-caret"></span></a>
+        <div class="nav-drop">
+          <a href="#academy">Content Hub<span>하루 15개 대규모 발행</span></a>
+          <a href="#youtube">유튜브 500편<span>45,600 구독</span></a>
+          <a href="#academy">학술 아카이빙<span>논문·학회 쉬운말</span></a>
+          <a href="#community">커뮤니티<span>업계의 LinkedIn</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#about">About <span class="nav-caret"></span></a>
+        <div class="nav-drop">
+          <a href="#about">비전 · 미션<span>7년 → 7분</span></a>
+          <a href="#about">Day 1 Traction<span>이미 가진 자산</span></a>
+          <a href="#about">4대 차별화<span>Shop·Test·Bid·Auto</span></a>
+          <a href="#about">창업자 김진영<span>청각학 15년</span></a>
+          <a href="#revenue">💰 수익 모델 · 사업계획<span>5대 수익원·TAM 1.2조</span></a>
+          <a href="#about">🏆 투자 제안<span>프리-시드 진행 중</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="#features">Features <span class="nav-caret"></span></a>
+        <div class="nav-drop">
+          <a href="#features">전체 21개 기능 지도<span>LIVE·개발중 한눈에</span></a>
+          <a href="#features">Hearing Aids<span>6대 브랜드 · FDA/CE</span></a>
+          <a href="#features">Subsidy Calc<span>131만원 · 국민건강보험법</span></a>
+          <a href="#features">Rehab<span>대한청각학회 · 6·8·12주</span></a>
+          <a href="#features">Center DB<span>심평원 · 접근성 6필터</span></a>
+          <a href="#features">Hearing Test<span>ISO 8253 · 순음 역치</span></a>
+          <a href="#features">Sound Field<span>HINT/QuickSIN ★ 킬러</span></a>
+          <a href="#features">AI Match<span>ASHA + NAL-NL2</span></a>
+          <a href="#features">Simulator<span>ISO 7029 · 4단계</span></a>
+          <a href="#features">Serenity<span>NIOSH · NRR 인증 6종</span></a>
+          <a href="#features">Cochlear<span>PTA 70dB+ 적응</span></a>
+          <a href="#features">Prescription OCR<span>처방전 자동 매칭</span></a>
+          <a href="#features">AI Visual Match<span>Gemini 귀 합성</span></a>
+          <a href="#features">Shop Catalog<span>20 모델 필터·시세</span></a>
+          <a href="#features">Reviews<span>실명 인증·4카테고리</span></a>
+          <a href="#features">Rankings<span>주간 관심도</span></a>
+          <a href="#features">Content Hub<span>하루 15개 큐레이션</span></a>
+          <a href="#features">Community<span>업계의 LinkedIn</span></a>
+          <a href="#features">YouTube 500<span>45,600 구독</span></a>
+          <a href="#features">Bidding<span>체험·구매 역경매</span></a>
+          <a href="#features">A11Y<span>글자·다크·고대비</span></a>
+          <a href="#features">Auto Platform<span>n8n · 자율 운영</span></a>
+        </div>
+      </div>
     </div>
-    <a href="tel:02-389-6999" class="nav-cta">02.389.6999</a>
+    <a href="javascript:void(0)" onclick="document.getElementById('my24-toggle')?.click()" class="nav-cta" style="background:linear-gradient(135deg,#2C5F4F 0%,#4A8B7A 100%);color:#fff;border:none;">💬 AI 24시 상담</a>
     <button class="mobile-toggle" id="mobileToggle" aria-label="menu" onclick="toggleMobileMenu()"><span></span></button>
   </div>
 
   <!-- 모바일 풀스크린 메뉴 -->
   <div class="mobile-menu" id="mobileMenu">
     <div class="mm-section">
-      <div class="mm-title">👋 Start Here · 처음이신가요?</div>
+      <div class="mm-title">👋 Start · 처음이신가요?</div>
       <a href="#start" class="mm-link" onclick="closeMobileMenu()">처음 오신 분 가이드 <small>4가지 경로 안내</small></a>
-    </div>
-    <div class="mm-section">
-      <div class="mm-title">🏢 About · 기업 소개</div>
-      <a href="#about" class="mm-link" onclick="closeMobileMenu()">비전 · 미션 <small>7년 → 7분 · 시간을 바꾸는 회사</small></a>
-      <a href="#about" class="mm-link" onclick="closeMobileMenu()">Day 1 Traction <small>이미 가진 자산</small></a>
-      <a href="#about" class="mm-link" onclick="closeMobileMenu()">창업자 김진영 <small>청각학 15년</small></a>
-      <a href="#revenue" class="mm-link" onclick="closeMobileMenu()">💰 수익 모델 · 사업계획 <small>5대 수익원·TAM 1.2조</small></a>
-      <a href="#about" class="mm-link" onclick="closeMobileMenu()">🏆 투자 제안 <small>프리-시드 진행 중</small></a>
-    </div>
-    <div class="mm-section">
-      <div class="mm-title">🗺 Features · 전체 기능</div>
-      <a href="#features" class="mm-link" onclick="closeMobileMenu()">21개 기능 지도 <small>LIVE·개발중 한눈에</small></a>
+      <a href="#tools" class="mm-link" onclick="closeMobileMenu()">잘 안 들려요 <small>자가검사 4종 · 5분</small></a>
+      <a href="#soundfield-deep" class="mm-link" onclick="closeMobileMenu()">이미 쓰고 있어요 <small>음장검사 재점검</small></a>
+      <a href="#price" class="mm-link" onclick="closeMobileMenu()">모델 고르고 있어요 <small>쇼핑몰 카탈로그</small></a>
+      <a href="#tools" class="mm-link" onclick="closeMobileMenu()">부모님 알아봐요 <small>시뮬레이터 체험</small></a>
     </div>
     <div class="mm-section">
       <div class="mm-title">🎮 Test · 자가 진단</div>
@@ -1146,25 +1148,37 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
       <a href="#advance" class="mm-link" onclick="closeMobileMenu()">AI Visual Match <small>귀 사진 합성</small></a>
     </div>
     <div class="mm-section">
+      <div class="mm-title">🛡 Serenity · 청각 보호</div>
+      <a href="#serenity" class="mm-link" onclick="closeMobileMenu()">Phonak Serenity 6종 <small>음악·사격·라이딩 외</small></a>
+    </div>
+    <div class="mm-section">
       <div class="mm-title">📚 Content · 콘텐츠</div>
       <a href="#academy" class="mm-link" onclick="closeMobileMenu()">Content Hub <small>하루 15개 대규모 발행</small></a>
       <a href="#youtube" class="mm-link" onclick="closeMobileMenu()">유튜브 500편 <small>45,600 구독</small></a>
       <a href="#community" class="mm-link" onclick="closeMobileMenu()">커뮤니티 <small>업계의 LinkedIn</small></a>
     </div>
+    <div class="mm-section">
+      <div class="mm-title">🏢 About · 기업 소개</div>
+      <a href="#about" class="mm-link" onclick="closeMobileMenu()">비전 · 미션 <small>7년 → 7분 · 시간을 바꾸는 회사</small></a>
+      <a href="#about" class="mm-link" onclick="closeMobileMenu()">Day 1 Traction <small>이미 가진 자산</small></a>
+      <a href="#about" class="mm-link" onclick="closeMobileMenu()">창업자 김진영 <small>청각학 15년</small></a>
+      <a href="#revenue" class="mm-link" onclick="closeMobileMenu()">💰 수익 모델 · 사업계획 <small>5대 수익원·TAM 1.2조</small></a>
+      <a href="#about" class="mm-link" onclick="closeMobileMenu()">🏆 투자 제안 <small>프리-시드 진행 중</small></a>
+    </div>
     <div class="mm-section" style="border-bottom:0;">
-      <div class="mm-title">🛡 Serenity · 청각 보호</div>
-      <a href="#serenity" class="mm-link" onclick="closeMobileMenu()">Phonak Serenity 6종 <small>음악·사격·라이딩 외</small></a>
+      <div class="mm-title">🗺 Features · 전체 기능</div>
+      <a href="#features" class="mm-link" onclick="closeMobileMenu()">21개 기능 지도 <small>LIVE·개발중 한눈에</small></a>
     </div>
     <div class="mm-cta">
+      <a href="javascript:void(0)" onclick="closeMobileMenu();document.getElementById('my24-toggle')?.click()">💬 AI 24시 상담</a>
       <a href="#about" onclick="closeMobileMenu()">🏢 기업 소개 · 투자 제안</a>
-      <a href="tel:02-389-6999" onclick="closeMobileMenu()">📞 02-389-6999 전화</a>
     </div>
   </div>
 </nav>
 
 <!-- 모바일 Sticky 하단 CTA 바 -->
 <div class="sticky-cta">
-  <a href="tel:02-389-6999" class="sc-call">📞 전화</a>
+  <a href="javascript:void(0)" onclick="document.getElementById('my24-toggle')?.click()" class="sc-call" style="background:linear-gradient(135deg,#2C5F4F 0%,#4A8B7A 100%);color:#fff;">💬 AI 상담</a>
   <a href="#tools" class="sc-test">🎮 자가검사</a>
   <a href="#bidding" class="sc-bid">🎯 비딩</a>
 </div>
@@ -1840,7 +1854,7 @@ function closeMobileMenu(){
       <p style="font-size:15px;color:rgba(40,44,42,0.85);line-height:1.75;max-width:680px;margin:0 auto 20px;">한국 보청기 시장 최초의 통합 플랫폼. 이미 매출 있는 오프라인·이커머스·유튜브 삼각편대 + 15년 임상 전문성 + 낮은 운영비(월 ₩20만). <strong>엔젤·프리시드 라운드 진행 중</strong>. 관심 있으시면 연락 주세요.</p>
       <div style="display:flex;justify-content:center;gap:10px;flex-wrap:wrap;">
         <a href="mailto:99hearing@gmail.com?subject=[MyHear] 투자 문의" style="padding:14px 24px;background:var(--ink);color:var(--bg-2);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;">📧 IR 자료 요청</a>
-        <a href="tel:02-389-6999" style="padding:14px 24px;background:rgba(40,44,42,0.1);color:var(--ink);border:1px solid var(--ink);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;">📞 대표 직통 02-389-6999</a>
+        <a href="javascript:void(0)" onclick="document.getElementById('my24-toggle')?.click()" style="padding:14px 24px;background:rgba(40,44,42,0.1);color:var(--ink);border:1px solid var(--ink);border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;cursor:pointer;">💬 AI 24시 즉시 상담</a>
       </div>
     </div>
 
@@ -2076,7 +2090,7 @@ function closeMobileMenu(){
   <a href="tel:02-389-6999" class="ad-banner" style="display:block;text-decoration:none;">
     <div class="ad-banner-label">AD SPACE · 01 · Top Fold</div>
     <h4>신제품 런칭 배너 자리</h4>
-    <p>첫 화면 직후 최고 노출 구간 · <strong>실시간 노출·클릭·전환 대시보드 제공</strong></p>
+    <p>첫 화면 직후 상단 노출 구간 · <strong>실시간 노출·클릭·전환 대시보드 제공</strong></p>
     <div class="ad-banner-cta">성과 기반 문의 →</div>
   </a>
 </div>
@@ -2089,7 +2103,7 @@ function closeMobileMenu(){
       <p class="sec-lead">15년 피팅 경험, 500편 영상 검증, 실제 고객 만족도 기준.</p>
     </div>
     <div class="picks-grid">
-      <article class="pick-card reveal"><div class="pick-rank">01</div><div class="pick-badge">AI Flagship</div><h3><em>Infinio</em> Sphere</h3><div class="pick-brand">PHONAK · 스위스 · 소노바</div><p class="pick-desc">DEEPSONIC AI 칩. 시끄러운 환경 음성 명료도 최고.</p><div class="pick-specs"><div class="pick-spec"><small>업계 평균</small><strong>320~400만원</strong></div><div class="pick-spec"><small>실제가</small><strong style="color:var(--accent);">비딩으로 확인</strong></div></div><a href="#bidding" class="pick-cta">비딩 신청 →</a></article>
+      <article class="pick-card reveal"><div class="pick-rank">01</div><div class="pick-badge">AI Flagship</div><h3><em>Infinio</em> Sphere</h3><div class="pick-brand">PHONAK · 스위스 · 소노바</div><p class="pick-desc">DEEPSONIC AI 칩. 시끄러운 환경 음성 명료도 우수.</p><div class="pick-specs"><div class="pick-spec"><small>업계 평균</small><strong>320~400만원</strong></div><div class="pick-spec"><small>실제가</small><strong style="color:var(--accent);">비딩으로 확인</strong></div></div><a href="#bidding" class="pick-cta">비딩 신청 →</a></article>
       <article class="pick-card reveal"><div class="pick-rank">02</div><div class="pick-badge">Brain-science</div><h3><em>Intent</em></h3><div class="pick-brand">OTICON · 덴마크 · 데만트</div><p class="pick-desc">4D 센서. 뇌가 여러 소리 자연스럽게 처리.</p><div class="pick-specs"><div class="pick-spec"><small>업계 평균</small><strong>270~350만원</strong></div><div class="pick-spec"><small>실제가</small><strong style="color:var(--accent);">비딩으로 확인</strong></div></div><a href="#bidding" class="pick-cta">비딩 신청 →</a></article>
       <article class="pick-card reveal"><div class="pick-rank">03</div><div class="pick-badge">Design</div><h3>Signia <em>IX</em></h3><div class="pick-brand">SIGNIA · 독일 · WSA</div><p class="pick-desc">독일 공학 + 이탈리아 디자인. 심미성 중시.</p><div class="pick-specs"><div class="pick-spec"><small>업계 평균</small><strong>220~300만원</strong></div><div class="pick-spec"><small>실제가</small><strong style="color:var(--accent);">비딩으로 확인</strong></div></div><a href="#bidding" class="pick-cta">비딩 신청 →</a></article>
     </div>
@@ -2737,8 +2751,8 @@ function closeMobileMenu(){
     </div>
 
     <div class="cochlear-partners">
-      <div class="cochlear-partner reveal"><div class="cochlear-partner-logo">MED-EL</div><div class="cochlear-partner-origin">AUSTRIA · MEDEL KOREA</div><p>유럽 최고 점유율. 음향 자연스러움 우수. 다양한 전극 옵션.</p></div>
-      <div class="cochlear-partner reveal"><div class="cochlear-partner-logo">Cochlear</div><div class="cochlear-partner-origin">AUSTRALIA · COCHLEAR KOREA</div><p>세계 시장 1위. 역사와 신뢰성. 장기 AS 네트워크 강점.</p></div>
+      <div class="cochlear-partner reveal"><div class="cochlear-partner-logo">MED-EL</div><div class="cochlear-partner-origin">AUSTRIA · MEDEL KOREA</div><p>유럽 점유율 상위. 음향 자연스러움 우수. 다양한 전극 옵션.</p></div>
+      <div class="cochlear-partner reveal"><div class="cochlear-partner-logo">Cochlear</div><div class="cochlear-partner-origin">AUSTRALIA · COCHLEAR KOREA</div><p>세계 시장 선두. 역사와 신뢰성. 장기 AS 네트워크 강점.</p></div>
       <div class="cochlear-partner reveal"><div class="cochlear-partner-logo">AB</div><div class="cochlear-partner-origin">USA · ADVANCED BIONICS</div><p>음질 혁신 선도. 하이레저 스트리밍. 소노바 그룹 (포낙과 동일).</p></div>
     </div>
   </div>
@@ -2752,7 +2766,7 @@ function closeMobileMenu(){
       <p class="sec-lead">MyHear가 자신 있게 취급하는 6개. 깊이 있는 전문성.</p>
     </div>
     <div class="brands-grid">
-      <article class="brand-card reveal"><div class="brand-logo">Phonak</div><div class="brand-origin">SWITZERLAND · SONOVA</div><p class="brand-desc">시장 점유율 1위권. 음성 명료도 강점.</p><div class="brand-tags"><span class="brand-tag">AI 딥소닉</span><span class="brand-tag">노이즈 캔슬링</span></div></article>
+      <article class="brand-card reveal"><div class="brand-logo">Phonak</div><div class="brand-origin">SWITZERLAND · SONOVA</div><p class="brand-desc">시장 점유율 상위권. 음성 명료도 강점.</p><div class="brand-tags"><span class="brand-tag">AI 딥소닉</span><span class="brand-tag">노이즈 캔슬링</span></div></article>
       <article class="brand-card reveal"><div class="brand-logo">Oticon</div><div class="brand-origin">DENMARK · DEMANT</div><p class="brand-desc">뇌과학 기반 독자적 접근.</p><div class="brand-tags"><span class="brand-tag">4D 센서</span><span class="brand-tag">BrainHearing</span></div></article>
       <article class="brand-card reveal"><div class="brand-logo">Signia</div><div class="brand-origin">GERMANY · WSA</div><p class="brand-desc">독일 공학 정교함. 디자인 강점.</p><div class="brand-tags"><span class="brand-tag">Own Voice</span><span class="brand-tag">AX</span></div></article>
       <article class="brand-card reveal"><div class="brand-logo">Widex</div><div class="brand-origin">DENMARK · WSA</div><p class="brand-desc">자연스러운 음질. 음악 애호가용.</p><div class="brand-tags"><span class="brand-tag">PureSound</span></div></article>
@@ -3070,7 +3084,7 @@ function closeMobileMenu(){
         <div style="position:absolute;top:-10px;right:20px;background:var(--accent-gold);color:var(--ink);padding:3px 10px;border-radius:999px;font-size:9px;font-weight:800;letter-spacing:0.1em;">TOP</div>
         <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;">
           <div style="font-family:var(--sans);font-weight:900;font-size:14px;letter-spacing:0.1em;color:var(--accent-gold);">FLAGSHIP</div>
-          <div style="font-size:10px;padding:3px 8px;background:rgba(216,176,128,0.2);border-radius:999px;color:var(--accent-gold);font-weight:700;">AI 최고급</div>
+          <div style="font-size:10px;padding:3px 8px;background:rgba(216,176,128,0.2);border-radius:999px;color:var(--accent-gold);font-weight:700;">AI 프리미엄</div>
         </div>
         <h4 style="font-family:var(--sans);font-weight:800;font-size:20px;letter-spacing:-0.02em;color:var(--bg-2);margin-bottom:6px;">기술의 끝</h4>
         <p style="font-size:13px;color:rgba(247,245,238,0.7);line-height:1.65;margin-bottom:14px;">극심한 소음 · 전문 직업 · 청력 보존 최우선인 분들.</p>
@@ -3133,7 +3147,7 @@ function closeMobileMenu(){
               <div style="font-family:var(--sans);font-weight:900;font-size:18px;letter-spacing:-0.02em;color:var(--ink);">Phonak</div>
               <div style="font-size:11px;color:var(--ink-3);">스위스 · 소노바 그룹</div>
             </div>
-            <div style="padding:4px 10px;background:rgba(216,176,128,0.15);color:#9B7B3F;border-radius:999px;font-size:10px;font-weight:700;">🏆 시장 1위</div>
+            <div style="padding:4px 10px;background:rgba(216,176,128,0.15);color:#9B7B3F;border-radius:999px;font-size:10px;font-weight:700;">🏆 시장 선두</div>
           </div>
           <p style="font-size:13px;color:var(--ink-2);line-height:1.65;margin:12px 0;"><strong>한 줄</strong>: "AI 최전선 · 시끄러운 환경에 강함"</p>
           <div style="padding:12px;background:var(--bg-2);border-radius:10px;font-size:12px;line-height:1.7;color:var(--ink-2);">
@@ -3167,7 +3181,7 @@ function closeMobileMenu(){
             </div>
             <div style="padding:4px 10px;background:rgba(226,123,108,0.15);color:#C4594A;border-radius:999px;font-size:10px;font-weight:700;">✨ 디자인</div>
           </div>
-          <p style="font-size:13px;color:var(--ink-2);line-height:1.65;margin:12px 0;"><strong>한 줄</strong>: "독일 공학 + 이탈리아 디자인 · 심미성 최고"</p>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.65;margin:12px 0;"><strong>한 줄</strong>: "독일 공학 + 이탈리아 디자인 · 심미성 우수"</p>
           <div style="padding:12px;background:var(--bg-2);border-radius:10px;font-size:12px;line-height:1.7;color:var(--ink-2);">
             <div><strong>✓ 추천:</strong> 외관 신경쓰는 분, 젊은 사용자, 디자인 우선</div>
             <div style="margin-top:6px;"><strong>✗ 비추:</strong> 기능·가성비만 보는 분</div>
@@ -3183,7 +3197,7 @@ function closeMobileMenu(){
             </div>
             <div style="padding:4px 10px;background:rgba(102,153,204,0.18);color:#4A7FB8;border-radius:999px;font-size:10px;font-weight:700;">🎵 음악</div>
           </div>
-          <p style="font-size:13px;color:var(--ink-2);line-height:1.65;margin:12px 0;"><strong>한 줄</strong>: "자연음 최고 · 음악가·오디오 애호가 선호"</p>
+          <p style="font-size:13px;color:var(--ink-2);line-height:1.65;margin:12px 0;"><strong>한 줄</strong>: "자연음 우수 · 음악가·오디오 애호가 선호"</p>
           <div style="padding:12px;background:var(--bg-2);border-radius:10px;font-size:12px;line-height:1.7;color:var(--ink-2);">
             <div><strong>✓ 추천:</strong> 음악·영화 즐기는 분, 자연음 최우선</div>
             <div style="margin-top:6px;"><strong>✗ 비추:</strong> 극심한 소음 환경 중심</div>
@@ -3392,7 +3406,7 @@ function closeMobileMenu(){
         <div style="background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:22px 20px;">
           <div style="font-family:var(--sans);font-weight:900;font-size:13px;color:var(--accent);margin-bottom:6px;">BTE</div>
           <div style="font-size:14px;font-weight:700;color:var(--ink);margin-bottom:10px;">귀걸이형 (전통)</div>
-          <p style="font-size:12.5px;color:var(--ink-3);line-height:1.6;">본체 전체 귀 뒤에. 배터리·출력 최강. 심도 난청이면 필수.</p>
+          <p style="font-size:12.5px;color:var(--ink-3);line-height:1.6;">본체 전체 귀 뒤에. 배터리·출력 강함. 심도 난청이면 필수.</p>
           <div style="margin-top:10px;font-size:11px;color:var(--accent);font-weight:700;">고도~심도 난청</div>
         </div>
         <div style="background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:22px 20px;">
@@ -3485,7 +3499,7 @@ function closeMobileMenu(){
           <button class="f-chip" data-filter="grade" data-value="Entry">Entry (입문)</button>
           <button class="f-chip" data-filter="grade" data-value="Mid">Mid (보급)</button>
           <button class="f-chip" data-filter="grade" data-value="Advance">Advance (프리미엄)</button>
-          <button class="f-chip" data-filter="grade" data-value="Flagship">Flagship (최고급)</button>
+          <button class="f-chip" data-filter="grade" data-value="Flagship">Flagship (최상위)</button>
         </div>
       </div>
 
@@ -3635,10 +3649,10 @@ const SHOP_MODELS = [
   {id:5, brand:'Oticon', model:'Intent', type:'RIC', grade:'Flagship', priceMin:270, priceMax:350, chipset:'Sirius (4D 센서)', mic:'4D 센서 기반 추적', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🧠', desc:'4D 센서 · 사용자 의도 파악 · 뇌가 소리를 자연스럽게 처리.', officialUrl:'https://www.oticon.com/', launched:'2024', popular:98},
   {id:6, brand:'Oticon', model:'Real 1', type:'RIC', grade:'Advance', priceMin:250, priceMax:320, chipset:'Polaris R', mic:'MoreSound Intelligence 2.0', bt:'블루투스 LE', battery:'충전식', ip:'IP68', channels:'24', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔊', desc:'갑작스러운 소음(SuddenSound) 특화 · 일상 소음 대응 탁월.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:85},
   {id:7, brand:'Oticon', model:'Real 2', type:'RIC', grade:'Mid', priceMin:170, priceMax:230, chipset:'Polaris R (일부)', mic:'오픈 사운드', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'16', features:['rechargeable','bluetooth'], emoji:'🌳', desc:'자연 음질 강조 · 가성비 모델.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:70},
-  {id:8, brand:'Signia', model:'IX 7', type:'RIC', grade:'Flagship', priceMin:280, priceMax:360, chipset:'Signia AX + IX', mic:'Dynamic Soundscape Processing', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'48', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'✨', desc:'이탈리아 디자인 + 독일 공학 · 대화 분리 기술 · 심미성 최고.', officialUrl:'https://www.signia.net/', launched:'2024', popular:92},
+  {id:8, brand:'Signia', model:'IX 7', type:'RIC', grade:'Flagship', priceMin:280, priceMax:360, chipset:'Signia AX + IX', mic:'Dynamic Soundscape Processing', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'48', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'✨', desc:'이탈리아 디자인 + 독일 공학 · 대화 분리 기술 · 심미성 우수.', officialUrl:'https://www.signia.net/', launched:'2024', popular:92},
   {id:9, brand:'Signia', model:'Pure Charge&Go IX', type:'RIC', grade:'Advance', priceMin:220, priceMax:290, chipset:'Signia IX', mic:'Augmented Focus', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'32', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔋', desc:'충전식 대표 · 활동량·걸음 수 트래킹 · 심미성.', officialUrl:'https://www.signia.net/', launched:'2023', popular:82},
   {id:10, brand:'Signia', model:'Pure 3', type:'RIC', grade:'Entry', priceMin:150, priceMax:200, chipset:'기본 플랫폼', mic:'기본 방향성', bt:'블루투스 일부', battery:'일반/충전', ip:'IP67', channels:'12', features:['bluetooth'], emoji:'📻', desc:'Signia 입문 · 기본 음질 충실.', officialUrl:'https://www.signia.net/', launched:'2022', popular:55},
-  {id:11, brand:'Widex', model:'Moment Sheer sRIC', type:'RIC', grade:'Flagship', priceMin:250, priceMax:330, chipset:'ZeroDelay', mic:'PureSound', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'15', features:['rechargeable','iphone','bluetooth'], emoji:'🌊', desc:'덴마크 · 자연음 최고 · 초저지연 기술 · 음악가에게 인기.', officialUrl:'https://www.widex.com/', launched:'2023', popular:78},
+  {id:11, brand:'Widex', model:'Moment Sheer sRIC', type:'RIC', grade:'Flagship', priceMin:250, priceMax:330, chipset:'ZeroDelay', mic:'PureSound', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'15', features:['rechargeable','iphone','bluetooth'], emoji:'🌊', desc:'덴마크 · 자연음 우수 · 초저지연 기술 · 음악가에게 인기.', officialUrl:'https://www.widex.com/', launched:'2023', popular:78},
   {id:12, brand:'ReSound', model:'Nexia', type:'RIC', grade:'Advance', priceMin:200, priceMax:270, chipset:'Auracast Ready', mic:'All Access Directionality', bt:'Auracast + LE Audio', battery:'충전식', ip:'IP68', channels:'17', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'📱', desc:'Made for iPhone 선도 · Apple 생태계 완벽 호환 · Auracast 지원.', officialUrl:'https://www.resound.com/', launched:'2024', popular:88},
   {id:13, brand:'Starkey', model:'Genesis AI', type:'RIC', grade:'Flagship', priceMin:300, priceMax:380, chipset:'Neuro Processor', mic:'Edge Mode+', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🤖', desc:'최초 AI 적용 브랜드 · 뇌파 분석 · 낙상 감지 · 통역 기능.', officialUrl:'https://www.starkey.com/', launched:'2023', popular:75},
   {id:14, brand:'Phonak', model:'Naida Lumity', type:'BTE', grade:'Flagship', priceMin:320, priceMax:400, chipset:'SoundRecover 2', mic:'StereoZoom', bt:'LE Audio', battery:'일반', ip:'IP68', channels:'20', features:['AI','iphone','waterproof','bluetooth'], emoji:'💪', desc:'고출력 BTE · 고도~심도 난청용 · 강력한 증폭.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:65},
@@ -3795,7 +3809,7 @@ function openShopModal(id) {
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line);font-size:11.5px;color:var(--ink-3);text-align:center;">
           <div><div style="font-weight:700;color:var(--accent);font-size:15px;">${Math.max(m.priceMin - 30, 50)}만</div><div>최저가</div></div>
           <div><div style="font-weight:700;color:var(--ink);font-size:15px;">${Math.round((m.priceMin + m.priceMax) / 2)}만</div><div>중앙값</div></div>
-          <div><div style="font-weight:700;color:var(--accent-warm);font-size:15px;">${m.priceMax + 20}만</div><div>최고가</div></div>
+          <div><div style="font-weight:700;color:var(--accent-warm);font-size:15px;">${m.priceMax + 20}만</div><div>상한가</div></div>
         </div>
         <p style="font-size:11px;color:var(--ink-4);line-height:1.6;margin-top:12px;text-align:center;font-style:italic;">※ 비딩 데이터 누적으로 실시간 업데이트 · 초기 데이터는 업계 평균 기준 시뮬레이션</p>
       </div>
@@ -4104,7 +4118,7 @@ if (document.readyState !== 'loading') renderShop();
   <div class="wrap">
     <div class="bidding-intro reveal">
       <div class="bidding-badge">14 · 즉시 구매 비딩 · 구매 제안서 시스템</div>
-      <h2>"살 건데,<br><em>누가 최고 조건?"</em></h2>
+      <h2>"살 건데,<br><em>누가 좋은 조건?"</em></h2>
       <p>숨고·크몽처럼 <strong>구매 제안서 하나</strong>로 전국 센터가 경쟁. 청력도 + 희망 모델 + 생활 패턴만 올리면 <strong>가격·AS·보증·청능재활·사은품</strong>까지 한 번에 비교 가능. 연락처는 끝까지 공개되지 않음.</p>
     </div>
 
@@ -4260,7 +4274,7 @@ if (document.readyState !== 'loading') renderShop();
           <div style="font-size:10px;font-weight:700;letter-spacing:0.2em;color:var(--accent-warm);text-transform:uppercase;margin-bottom:6px;">Top Reviewers · 월간 베스트</div>
           <h3 style="font-family:var(--sans);font-weight:800;font-size:22px;letter-spacing:-0.02em;color:var(--ink);">이 분들 덕분에 신뢰가 만들어집니다</h3>
         </div>
-        <div style="padding:10px 18px;background:var(--accent-gold);color:var(--ink);border-radius:999px;font-size:12px;font-weight:800;">이번 달 최고 보상: 보청기 1세트 증정 🎁</div>
+        <div style="padding:10px 18px;background:var(--accent-gold);color:var(--ink);border-radius:999px;font-size:12px;font-weight:800;">이번 달 베스트 혜택: 보청기 1세트 증정 🎁</div>
       </div>
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;">
         <div style="background:var(--bg);border-radius:12px;padding:18px;border-left:4px solid #FFD700;">
@@ -5007,7 +5021,7 @@ if (document.readyState !== 'loading') renderShop();
     <h2 class="reveal">30분,<br><em>무료 상담.</em></h2>
     <p class="reveal">청력 검사 · 가격 · 제품 · 보조금 · 청능재활 · 세레니티 · 인공와우.<br>예약 없이도 방문 가능.</p>
     <div class="final-ctas reveal">
-      <a href="tel:02-389-6999" class="btn btn-dark"><span>02.389.6999</span><span class="btn-arrow">→</span></a>
+      <a href="javascript:void(0)" onclick="document.getElementById('my24-toggle')?.click()" class="btn btn-dark" style="cursor:pointer;"><span>💬 AI 24시 상담</span><span class="btn-arrow">→</span></a>
       <a href="https://smartstore.naver.com/99eha" target="_blank" rel="noopener" class="btn btn-ghost">네이버 스토어</a>
     </div>
   </div>
@@ -5051,9 +5065,7 @@ if (document.readyState !== 'loading') renderShop();
   </div>
 </footer>
 
-<a href="tel:02-389-6999" class="floating-cta-global" aria-label="전화 상담 02-389-6999">
-  <span>02.389.6999</span>
-</a>
+<!-- 전역 floating 전화 CTA 제거 · MyHear 24 챗봇으로 대체 -->
 
 <!-- ============ MODAL: HEARING TEST ============ -->
 <div class="modal-overlay" id="modal-hearing" onclick="if(event.target===this)closeModal('modal-hearing')">
@@ -5681,7 +5693,7 @@ function showAIResult(){
   if(severe){
     recos.push('① Phonak Naida Lumity (BTE, 고출력, 220만원대) — 고도 난청 전용 강력 증폭');
   } else if(noisy && highBudget){
-    recos.push('① Phonak Infinio Sphere (RIC, AI Flagship, 320만원대) — 소음 환경 최고 성능');
+    recos.push('① Phonak Infinio Sphere (RIC, AI Flagship, 320만원대) — 소음 환경 우수 성능');
     recos.push('② Oticon Intent (RIC, 뇌과학, 270만원대) — 자연스러운 청취');
   } else if(noisy && midBudget){
     recos.push('① Oticon Intent (RIC, 270만원대) — 뇌과학 기반 · 소음 환경 우수');
@@ -5699,7 +5711,7 @@ function showAIResult(){
     recos.push('① Phonak Audeo Lumity 엔트리 (RIC, 180만원대) — 입문');
     recos.push('② Signia Pure Charge&Go (RIC, 170만원대) — 충전식');
   } else {
-    recos.push('① Phonak Infinio Sphere (AI Flagship, 320만원대) — 최고 성능');
+    recos.push('① Phonak Infinio Sphere (AI Flagship, 320만원대) — 최상위 등급');
     recos.push('② Oticon Intent (뇌과학, 270만원대) — 자연 청취');
   }
 
