@@ -1,9 +1,18 @@
 {
   "written": [
-    "ai-보청기-장점"
+    "ai-보청기-장점",
+    "ric-vs-bte"
   ],
-  "last_updated": "2026-04-21",
+  "last_updated": "2026-04-22",
   "posts": [
+    {
+      "slug": "ric-vs-bte",
+      "filename": "2026-04-22-ric-vs-bte.html",
+      "date": "2026-04-22",
+      "title": "RIC형 vs BTE형 보청기, 어떤 게 맞을까",
+      "excerpt": "RIC형과 BTE형 보청기, 생김새만 다른 게 아닙니다. 청력 상태·귀 환경·관리 방식까지 고려해야 하는 이유를 15년 경력 전문가가 정리했습니다.",
+      "keywords": "RIC형 보청기, BTE형 보청기, 보청기 종류, 귓속형 보청기, 귀걸이형 보청기, 보청기 선택, 청력손실"
+    },
     {
       "slug": "ai-보청기-장점",
       "filename": "2026-04-21-ai-보청기-장점.html",
