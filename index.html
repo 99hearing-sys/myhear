@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>MyHear — 7년 방치의 시간을, 7분으로 단축</title>
-<meta name="description" content="난청 인지 후 보청기 착용까지 평균 7년. MyHear는 이 시간을 7분으로 단축합니다. 조기 중재·완전 재활·평생 관리까지, 자율 운영 플랫폼이 함께합니다. 15년 청각학 전공 김진영 대표.">
+<meta name="description" content="난청 인지 후 보청기 착용까지 평균 7년. MyHear는 이 시간을 7분으로 단축합니다. 조기 중재·완전 재활·평생 관리까지, 자율 운영 플랫폼이 함께합니다. 15년 청각학 전공 보청기 에디터.">
 <meta name="keywords" content="보청기,마이히어,난청조기중재,청능재활,어음인지도,자율플랫폼,청각보호,포낙,오티콘,시그니아,세레니티초이스,청각장애보조금,131만원,인공와우,보청기커뮤니티,보청기순위,청각사,보청기에디터,역경매비딩,음장검사">
-<meta name="author" content="김진영 · 보청기에디터">
+<meta name="author" content="보청기에디터">
 <meta name="theme-color" content="#2C5F4E">
 <link rel="canonical" href="https://myhear.pages.dev/">
 
@@ -284,16 +284,10 @@ img{max-width:100%;display:block;}
 .hero-trust-item strong{font-family:var(--display);font-weight:400;font-size:19px;color:var(--ink);font-style:normal;line-height:1;}
 .hero-trust-star{color:var(--accent-gold);letter-spacing:-2px;font-size:14px;}
 .hero-visual{position:relative;aspect-ratio:4/5;border-radius:24px;overflow:hidden;box-shadow:var(--shadow-xl);background:linear-gradient(135deg,#F5F5F1,#E8E8E0);}
-.hero-visual img{width:100%;height:100%;object-fit:cover;}
-.hero-visual-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(10,10,10,0.5) 100%);pointer-events:none;}
-.hero-visual-caption{position:absolute;bottom:28px;left:28px;right:28px;color:#FFF;z-index:2;}
-.hero-visual-caption-label{font-family:var(--sans);font-size:10.5px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-bottom:8px;}
-.hero-visual-caption h3{font-family:var(--sans);font-weight:600;font-size:20px;letter-spacing:-0.02em;margin-bottom:4px;}
-.hero-visual-caption p{font-size:13px;color:rgba(255,255,255,0.85);line-height:1.5;}
-.hero-badge-floating{position:absolute;top:24px;right:24px;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);border-radius:14px;padding:14px 16px;box-shadow:var(--shadow-md);display:flex;align-items:center;gap:10px;z-index:3;}
-.hero-badge-floating-icon{width:36px;height:36px;background:var(--accent-light);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--display);font-style:normal;color:var(--accent);font-size:18px;}
-.hero-badge-floating-text strong{display:block;font-size:13px;color:var(--ink);font-weight:600;}
-.hero-badge-floating-text span{font-family:var(--sans);font-size:10px;color:var(--ink-3);letter-spacing:0.05em;}
+.hero-visual img{width:100%;height:100%;object-fit:cover;filter:brightness(1.08) saturate(0.92) contrast(0.98);}
+.hero-visual-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(255,255,255,0.06) 0%,transparent 40%,transparent 70%,rgba(15,23,19,0.28) 100%);pointer-events:none;}
+/* v20 색감 개선 · 위 필터로 이미지를 크림톤에 맞게 한 단계 밝히고 채도를 살짝 낮춤 */
+/* v20 · Hero 위젯 2종 (hero-visual-caption · hero-badge-floating) 제거. 플랫폼 중립성 · 본명 노출 금지 준수 */
 @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:48px;}.hero-visual{max-width:480px;margin:0 auto;}}
 
 /* =============== PRESS BANNER v11 · Social Proof =============== */
@@ -967,7 +961,7 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
 <!-- ============ TOP BAR ============ -->
 <div class="topbar">
   <div class="topbar-inner">
-    <div><strong>평일 10:00 – 17:00</strong><span class="topbar-hide"> · 은평 구파발역 3번 출구 도보 1분</span></div>
+    <div><strong>평일 10:00 – 17:00</strong></div>
     <div>
       <span class="a11y-tools" title="접근성 도구">
         <button onclick="changeFontSize('default')" class="a11y-btn a11y-font" data-size="default" title="기본 글씨">A</button>
@@ -1071,7 +1065,7 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
           <a href="#about">비전 · 미션<span>7년 → 7분</span></a>
           <a href="#about">Day 1 Traction<span>이미 가진 자산</span></a>
           <a href="#about">4대 차별화<span>Shop·Test·Bid·Auto</span></a>
-          <a href="#about">창업자 김진영<span>청각학 15년</span></a>
+          <a href="#about">창업자 · 보청기 에디터<span>청각학 15년</span></a>
           <a href="#revenue">💰 수익 모델 · 사업계획<span>5대 수익원·TAM 1.2조</span></a>
           <a href="#about">🏆 투자 제안<span>프리-시드 진행 중</span></a>
         </div>
@@ -1161,7 +1155,7 @@ footer{background:linear-gradient(180deg,#1A1814 0%,var(--ink) 100%);color:var(-
       <div class="mm-title">🏢 About · 기업 소개</div>
       <a href="#about" class="mm-link" onclick="closeMobileMenu()">비전 · 미션 <small>7년 → 7분 · 시간을 바꾸는 회사</small></a>
       <a href="#about" class="mm-link" onclick="closeMobileMenu()">Day 1 Traction <small>이미 가진 자산</small></a>
-      <a href="#about" class="mm-link" onclick="closeMobileMenu()">창업자 김진영 <small>청각학 15년</small></a>
+      <a href="#about" class="mm-link" onclick="closeMobileMenu()">창업자 · 보청기 에디터 <small>청각학 15년</small></a>
       <a href="#revenue" class="mm-link" onclick="closeMobileMenu()">💰 수익 모델 · 사업계획 <small>5대 수익원·TAM 1.2조</small></a>
       <a href="#about" class="mm-link" onclick="closeMobileMenu()">🏆 투자 제안 <small>프리-시드 진행 중</small></a>
     </div>
@@ -1229,18 +1223,6 @@ function closeMobileMenu(){
       <div class="hero-visual">
         <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=900&q=80" alt="보청기 전문가 상담 - MyHear" loading="eager">
         <div class="hero-visual-overlay"></div>
-        <div class="hero-badge-floating">
-          <div class="hero-badge-floating-icon">김</div>
-          <div class="hero-badge-floating-text">
-            <strong>김진영 대표</strong>
-            <span>청각학 15년 · 의료기기 1240호</span>
-          </div>
-        </div>
-        <div class="hero-visual-caption">
-          <div class="hero-visual-caption-label">FLAGSHIP · 은평 본점</div>
-          <h3>직접 피팅 · 평생 사후관리</h3>
-          <p>구파발역 3번 출구 도보 1분 · 은평성모병원 앞</p>
-        </div>
       </div>
     </div>
   </div>
@@ -1353,7 +1335,7 @@ function closeMobileMenu(){
           <strong style="color:var(--accent-gold);">"7년 방치의 시간을, 7분으로 단축한다."</strong><br>
           <em style="color:var(--accent-gold);font-style:normal;">이 한 줄의 미션을, 개업 7주년이 되는 2026년에 시작합니다.</em>
         </p>
-        <p style="font-size:13px;color:rgba(247,245,238,0.5);margin-top:14px;line-height:1.65;">대표 김진영 · 1990년생 · 15년 청각학 · 의료기기 판매업 1240호<br>99유럽보청기 · 사업자등록 126-34-00739 · 2019.09.09 개업</p>
+        <p style="font-size:13px;color:rgba(247,245,238,0.5);margin-top:14px;line-height:1.65;">대표 · 보청기 에디터 · 1990년생 · 15년 청각학 · 의료기기 판매업 1240호<br>사업자등록 126-34-00739 · 2019.09.09 개업</p>
       </div>
     </div>
   </div>
@@ -1464,7 +1446,7 @@ function closeMobileMenu(){
         <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:#3C1E1E;text-transform:uppercase;margin-bottom:12px;">KAKAO LOGIN · 준비중</div>
         <h3 style="font-family:var(--sans);font-weight:900;font-size:clamp(26px,3.5vw,40px);letter-spacing:-0.03em;color:#3C1E1E;margin-bottom:12px;">💬 카카오톡으로 1초 가입</h3>
         <p style="font-size:16px;color:#3C1E1E;opacity:0.8;max-width:520px;margin:0 auto 24px;line-height:1.65;">아이디·비밀번호 필요 없음. 카톡 한 번 누르면 자동 가입. 탈퇴도 한 번에.</p>
-        <button onclick="alert('💬 카카오톡 로그인\\n\\n곧 오픈 예정입니다.\\n사전 등록하시면 오픈 시 즉시 알림드립니다.\\n\\n준비 기간 중에도\\n사이트 모든 기능 가입 없이 무료 이용 가능합니다.')" style="padding:16px 40px;background:#3C1E1E;color:#FEE500;border:none;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:-0.01em;">사전 등록하기 →</button>
+        <button onclick="alert('💬 카카오톡 로그인\n\n곧 오픈 예정입니다.\n사전 등록하시면 오픈 시 즉시 알림드립니다.\n\n준비 기간 중에도\n사이트 모든 기능 가입 없이 무료 이용 가능합니다.')" style="padding:16px 40px;background:#3C1E1E;color:#FEE500;border:none;border-radius:12px;font-size:15px;font-weight:800;cursor:pointer;letter-spacing:-0.01em;">사전 등록하기 →</button>
       </div>
 
       <!-- 가입하면 좋은 점 -->
@@ -1520,7 +1502,7 @@ function closeMobileMenu(){
             <li>✓ 베스트 회원 랭킹</li>
             <li>✓ Family Benefits 평생</li>
           </ul>
-          <button onclick="alert('고객 회원 사전 등록\\n\\n가입 조건:\\n① 자가검사 완료 또는\\n② 청력도 사진 업로드 또는\\n③ 진료기록지 스캔\\n\\n위 중 1가지로 프로필 완성 가능해야 합니다.\\n\\n오픈 즉시 카톡 알림 · 초기 가입자 리워드.\\n02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--ink);color:var(--bg-2);border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">사전 등록 →</button>
+          <button onclick="alert('고객 회원 사전 등록\n\n가입 조건:\n① 자가검사 완료 또는\n② 청력도 사진 업로드 또는\n③ 진료기록지 스캔\n\n위 중 1가지로 프로필 완성 가능해야 합니다.\n\n오픈 즉시 카톡 알림 · 초기 가입자 리워드.\n02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--ink);color:var(--bg-2);border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">사전 등록 →</button>
         </div>
 
         <!-- TYPE 2 · 업체 -->
@@ -1538,7 +1520,7 @@ function closeMobileMenu(){
             <li>✓ 고객 리뷰 응답</li>
             <li>✓ 베스트 업체 랭킹</li>
           </ul>
-          <button onclick="alert('업체 회원 사전 등록\\n\\n★ 신생·중소 센터 특별 환영!\\nHear.com 초기 전략 — 보수적 대형 센터가 비딩 꺼릴 때, 신생 센터에게 급성장 기회.\\n\\n가입 조건 (프로필 투명 공개):\\n① 사업자등록증·의료기기 판매업\\n② 대표 청각사 이름·사진·자격증\\n③ 경력·전문 분야\\n④ 주력 브랜드·영업시간\\n⑤ 접근성 정보 (주차·엘베 등)\\n\\n초기 입점 수수료 대폭 우대.\\n베스트 업체 랭킹 우선 노출.\\n02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--ink);color:var(--bg-2);border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">업체 사전 등록 →</button>
+          <button onclick="alert('업체 회원 사전 등록\n\n★ 신생·중소 센터 특별 환영!\nHear.com 초기 전략 — 보수적 대형 센터가 비딩 꺼릴 때, 신생 센터에게 급성장 기회.\n\n가입 조건 (프로필 투명 공개):\n① 사업자등록증·의료기기 판매업\n② 대표 청각사 이름·사진·자격증\n③ 경력·전문 분야\n④ 주력 브랜드·영업시간\n⑤ 접근성 정보 (주차·엘베 등)\n\n초기 입점 수수료 대폭 우대.\n베스트 업체 랭킹 우선 노출.\n02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--ink);color:var(--bg-2);border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer;">업체 사전 등록 →</button>
         </div>
 
         <!-- TYPE 3 · 제조사 (NEW) -->
@@ -1556,7 +1538,7 @@ function closeMobileMenu(){
             <li>✓ B2B 데이터·시장 통계</li>
             <li>✓ 유통망(업체 DB) 직접 접근</li>
           </ul>
-          <button onclick="alert('제조사 공식 파트너십\\n\\nPhonak·Oticon·Signia·Widex\\nStarkey·ReSound 등 6대 브랜드\\n국내외 모든 제조사 환영.\\n\\n법인·브랜드 공식 인증 후 가입.\\n대표 직통: 02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--accent-gold);color:var(--ink);border:none;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;">제조사 제휴 문의 →</button>
+          <button onclick="alert('제조사 공식 파트너십\n\nPhonak·Oticon·Signia·Widex\nStarkey·ReSound 등 6대 브랜드\n국내외 모든 제조사 환영.\n\n법인·브랜드 공식 인증 후 가입.\n대표 직통: 02-389-6999')" style="margin-top:20px;width:100%;padding:13px;background:var(--accent-gold);color:var(--ink);border:none;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;">제조사 제휴 문의 →</button>
         </div>
       </div>
 
@@ -1628,6 +1610,18 @@ function closeMobileMenu(){
   </div>
 </section>
 
+<!-- ============ v19 · BANNER A · D-Day 정식 런칭 ============ -->
+<div class="promo-banner banner-dday reveal">
+  <div class="promo-banner-inner">
+    <div class="promo-banner-body">
+      <span class="promo-banner-eyebrow">🎯 2026.09.09 · D-Day</span>
+      <h3>개업 7주년에 맞춰,<br>MyHear 정식 v1 런칭.</h3>
+      <p>현재 베타 운영 중. 모든 기능 가입 없이 무료 이용 가능. 정식 런칭 전 사전 등록 시 오픈 즉시 알림.</p>
+    </div>
+    <a href="#about" class="promo-banner-cta">로드맵 보기 →</a>
+  </div>
+</div>
+
 <!-- ============ ★ ONBOARDING · 처음 오신 분 튜토리얼 (NEW) ============ -->
 <section style="padding:50px 0;background:var(--bg);position:relative;border-bottom:1px solid var(--line);" id="start">
   <div class="wrap" style="max-width:1100px;">
@@ -1683,6 +1677,99 @@ function closeMobileMenu(){
         <p style="font-size:13px;color:var(--accent-deep);line-height:1.55;">투자자·업체 파트너·언론 문의는 기업 소개 페이지에서.</p>
       </div>
       <a href="#about" style="padding:10px 18px;background:var(--accent);color:var(--bg-2);border-radius:999px;font-size:12px;font-weight:700;text-decoration:none;white-space:nowrap;">기업 소개 보기 →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ v19 · LIFESTYLE · 실제 사용 시나리오 (NEW) ============ -->
+<section class="lifestyle-section">
+  <div class="wrap" style="max-width:1100px;">
+    <div class="reveal" style="text-align:center;margin-bottom:12px;">
+      <div style="display:inline-flex;align-items:center;gap:8px;padding:6px 14px;background:var(--bg);border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:700;letter-spacing:0.15em;color:var(--ink-3);text-transform:uppercase;margin-bottom:14px;">LIFESTYLE · 실제 사용 모습</div>
+      <h2 style="font-family:var(--sans);font-weight:800;font-size:clamp(22px,3.2vw,32px);letter-spacing:-0.02em;line-height:1.2;color:var(--ink);margin-bottom:10px;">언제·어디서 <em style="color:var(--accent);font-style:normal;">쓰는지</em>부터 정합니다.</h2>
+      <p style="font-size:14px;color:var(--ink-3);line-height:1.65;max-width:640px;margin:0 auto;">보청기 선택의 출발점은 "모델"이 아니라 "내 생활 패턴"입니다. 대화 많은 환경? 음악? 수면? 상황별로 필요한 기능이 다릅니다.</p>
+    </div>
+
+    <div class="lifestyle-grid reveal">
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/family-dinner.jpg" alt="가족 식사" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">👨‍👩‍👧‍👦</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 01</span>
+          <h4>가족 식사 자리</h4>
+          <p>여러 명이 겹쳐 말하는 식탁. <strong>음성 분리·빔포밍</strong>이 핵심. Flagship 등급에서 체감 차이.</p>
+        </div>
+      </div>
+
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/cafe-conversation.jpg" alt="카페 대화" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">☕</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 02</span>
+          <h4>카페·식당 대화</h4>
+          <p>배경 소음 속 1:1 대화. <strong>SNR 개선</strong>(+7dB 이상)이 필수. Mid~Advance 등급 이상 권장.</p>
+        </div>
+      </div>
+
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/lecture-hall.jpg" alt="강의실·회의" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">🎓</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 03</span>
+          <h4>강의실·회의실</h4>
+          <p>멀리서 말하는 화자. <strong>Roger FM·Made for iPhone</strong> 지원 모델이 답. Phonak·ReSound 강점.</p>
+        </div>
+      </div>
+
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/music-concert.jpg" alt="음악·공연" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">🎶</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 04</span>
+          <h4>음악·공연 감상</h4>
+          <p>음질·지연이 중요. <strong>저지연 기술</strong>(Widex ZeroDelay 등)과 음악 전용 프로그램. Serenity Music 병행 추천.</p>
+        </div>
+      </div>
+
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/phone-call.jpg" alt="전화 통화" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">📞</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 05</span>
+          <h4>전화 통화</h4>
+          <p>양쪽 귀로 바로 수신. <strong>블루투스·LE Audio·Auracast</strong>. 최신 모델은 iPhone·Galaxy 직결.</p>
+        </div>
+      </div>
+
+      <div class="lifestyle-card">
+        <div class="lifestyle-img">
+          <img src="/images/lifestyle/outdoor-walk.jpg" alt="야외 산책·운동" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="lifestyle-img-fallback" style="display:none;">🌳</div>
+        </div>
+        <div class="lifestyle-body">
+          <span class="lifestyle-tag">시나리오 06</span>
+          <h4>야외 산책·운동</h4>
+          <p>바람·땀·비. <strong>IP68 방수·충전식·낙상 감지</strong>. Starkey Genesis AI·Phonak 강점.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="margin-top:28px;padding:20px 24px;background:var(--bg);border:1px solid var(--line);border-radius:14px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:240px;">
+        <div style="font-size:11px;font-weight:700;letter-spacing:0.12em;color:var(--accent);text-transform:uppercase;margin-bottom:5px;">본인에게 맞는 시나리오가?</div>
+        <p style="font-size:13.5px;color:var(--ink-2);line-height:1.55;margin:0;">자가검사 + AI 유형 매칭 기능으로 <strong>당신 상황에 맞는 모델·등급</strong>을 자동 추천합니다.</p>
+      </div>
+      <a href="#tools" style="padding:12px 22px;background:var(--ink);color:var(--bg-2);border-radius:999px;font-size:12.5px;font-weight:700;text-decoration:none;white-space:nowrap;">AI 매칭 시작 →</a>
     </div>
   </div>
 </section>
@@ -1835,7 +1922,7 @@ function closeMobileMenu(){
         <div style="width:120px;height:120px;background:linear-gradient(135deg,var(--accent-gold) 0%,#B89968 100%);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--sans);font-weight:900;font-size:48px;color:var(--ink);">김</div>
         <div>
           <div style="font-size:11px;font-weight:700;letter-spacing:0.2em;color:var(--accent-gold);text-transform:uppercase;margin-bottom:8px;">Founder · CEO</div>
-          <h3 style="font-family:var(--sans);font-weight:900;font-size:28px;letter-spacing:-0.02em;color:var(--bg-2);margin-bottom:8px;">김진영 <span style="font-size:14px;color:rgba(247,245,238,0.6);font-weight:400;">· 1990생 · 만 35세</span></h3>
+          <h3 style="font-family:var(--sans);font-weight:900;font-size:28px;letter-spacing:-0.02em;color:var(--bg-2);margin-bottom:8px;">보청기 에디터 <span style="font-size:14px;color:rgba(247,245,238,0.6);font-weight:400;">· 1990생 · 만 35세</span></h3>
           <p style="font-size:14px;color:rgba(247,245,238,0.85);line-height:1.7;margin-bottom:14px;"><strong style="color:var(--accent-gold);">청각학 전공 15년</strong>. 2019년 99유럽보청기 개업. 유튜브 "보청기 에디터" 운영자 (45,600 구독·500편). 오프라인·이커머스·크리에이터 삼각편대를 혼자 운영하며 플랫폼 기획·개발을 AI 공동창업자(Claude·Gemini)와 함께 진행 중.</p>
           <div style="display:flex;flex-wrap:wrap;gap:8px;">
             <span style="padding:4px 10px;background:rgba(216,176,128,0.15);color:var(--accent-gold);border-radius:999px;font-size:11px;font-weight:600;">청각학 MS</span>
@@ -2065,7 +2152,7 @@ function closeMobileMenu(){
           <div style="font-size:32px;margin-bottom:12px;">⚖️</div>
           <div style="font-size:10.5px;font-weight:700;letter-spacing:0.15em;color:var(--accent-gold);text-transform:uppercase;margin-bottom:8px;">원칙 2</div>
           <h4 style="font-family:var(--sans);font-weight:800;font-size:18px;letter-spacing:-0.02em;color:var(--bg-2);margin-bottom:10px;">공정한 경쟁</h4>
-          <p style="font-size:13px;color:rgba(247,245,238,0.75);line-height:1.7;">MyHear 본점도 자기 가격 먼저 공개 X. 비딩은 익명·동등 조건. 신생·소규모 센터도 대형 센터와 같은 출발선.</p>
+          <p style="font-size:13px;color:rgba(247,245,238,0.75);line-height:1.7;">어떤 센터도 자기 가격 먼저 공개 X. 비딩은 익명·동등 조건. 신생·소규모 센터도 대형 센터와 같은 출발선.</p>
         </div>
         <div style="background:rgba(247,245,238,0.05);border:1px solid rgba(247,245,238,0.12);border-radius:16px;padding:28px 24px;">
           <div style="font-size:32px;margin-bottom:12px;">🌀</div>
@@ -3438,6 +3525,23 @@ function closeMobileMenu(){
 </style>
 
 <!-- ============ ★ SHOP · 쇼핑몰식 보청기 카탈로그 (v15.2 NEW) ============ -->
+<!-- ============ v19 · BANNER B · Shop 투명 공개 ============ -->
+<div class="promo-banner banner-shop reveal">
+  <div class="promo-banner-inner">
+    <div class="promo-banner-body">
+      <span class="promo-banner-eyebrow">🛍 투명 쇼핑몰 · 다나와式</span>
+      <h3>전 업계 시세를<br>한눈에 공개합니다.</h3>
+      <p>6대 글로벌 브랜드 20개 주력 모델. 가격대·등급·유형·기능 5대 필터. 원하는 모델 골라 <strong>비딩 신청</strong>하면 전국 센터가 조건 경쟁.</p>
+      <div class="banner-shop-stats">
+        <div class="banner-shop-stat"><strong>6</strong><small>글로벌 브랜드</small></div>
+        <div class="banner-shop-stat"><strong>20</strong><small>주력 모델</small></div>
+        <div class="banner-shop-stat"><strong>4%</strong><small>거래 수수료</small></div>
+      </div>
+    </div>
+    <a href="#price" class="promo-banner-cta">쇼핑 시작 →</a>
+  </div>
+</div>
+
 <section class="shop-section" id="price">
   <div class="wrap">
     <div class="sec-head reveal">
@@ -3596,7 +3700,67 @@ function closeMobileMenu(){
 .shop-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;}
 .shop-card{background:var(--bg);border:1px solid var(--line);border-radius:16px;padding:22px 20px;transition:all 0.2s;cursor:pointer;position:relative;}
 .shop-card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg);border-color:var(--accent);}
-.shop-img{width:100%;height:140px;background:linear-gradient(135deg,var(--bg-2) 0%,#E8E3D8 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:48px;margin-bottom:14px;color:var(--ink-4);}
+.shop-img{width:100%;height:140px;background:linear-gradient(135deg,var(--bg-2) 0%,#E8E3D8 100%);border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--ink-4);overflow:hidden;position:relative;}
+.shop-img img{width:100%;height:100%;object-fit:contain;padding:14px;transition:transform 0.3s;}
+.shop-card:hover .shop-img img{transform:scale(1.04);}
+.shop-img-fallback{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--ink-4);}
+.shop-img-fallback .emoji{font-size:44px;}
+.shop-img-fallback .brand-tag{font-size:10px;font-weight:700;letter-spacing:0.12em;color:var(--ink-3);text-transform:uppercase;background:rgba(255,255,255,0.7);padding:3px 8px;border-radius:4px;}
+
+/* === v19 · Promo Banners (이미지 없이 HTML/CSS만으로 애플톤) === */
+.promo-banner{position:relative;margin:48px auto;max-width:1100px;border-radius:20px;overflow:hidden;isolation:isolate;}
+.promo-banner::before{content:"";position:absolute;inset:0;z-index:-1;}
+.promo-banner-inner{padding:36px 40px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+.promo-banner-body{flex:1;min-width:260px;}
+.promo-banner-eyebrow{display:inline-block;font-size:10.5px;font-weight:700;letter-spacing:0.2em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:10px;}
+.promo-banner h3{font-family:var(--sans);font-weight:800;font-size:clamp(20px,2.8vw,28px);letter-spacing:-0.02em;line-height:1.25;margin:0 0 8px 0;}
+.promo-banner p{font-size:13.5px;line-height:1.6;margin:0;}
+.promo-banner-cta{padding:13px 24px;border-radius:999px;font-size:13px;font-weight:700;text-decoration:none;white-space:nowrap;transition:transform 0.2s;display:inline-flex;align-items:center;gap:6px;}
+.promo-banner-cta:hover{transform:translateX(3px);}
+/* 각 배너 스타일 */
+.banner-dday{background:linear-gradient(135deg,#1A3D2F 0%,#2C5F4E 55%,#4A8B7A 100%);color:#F7F5EE;}
+.banner-dday .promo-banner-eyebrow{background:rgba(247,245,238,0.18);color:#FEE;backdrop-filter:blur(10px);}
+.banner-dday p{color:rgba(247,245,238,0.82);}
+.banner-dday .promo-banner-cta{background:#F7F5EE;color:#1A3D2F;}
+.banner-dday::after{content:"";position:absolute;top:-40%;right:-10%;width:400px;height:400px;background:radial-gradient(circle,rgba(201,152,126,0.3),transparent 65%);pointer-events:none;}
+
+.banner-shop{background:#FAF8F3;color:var(--ink);border:1px solid var(--line);}
+.banner-shop .promo-banner-eyebrow{background:var(--accent-light);color:var(--accent);}
+.banner-shop p{color:var(--ink-3);}
+.banner-shop .promo-banner-cta{background:var(--accent);color:var(--bg-2);}
+.banner-shop-stats{display:flex;gap:22px;margin-top:14px;}
+.banner-shop-stat strong{display:block;font-family:var(--sans);font-weight:800;font-size:22px;color:var(--accent);letter-spacing:-0.02em;}
+.banner-shop-stat small{font-size:11px;color:var(--ink-4);letter-spacing:0.03em;}
+
+.banner-ir{background:linear-gradient(135deg,#3C1E1E 0%,#5C3030 100%);color:#F7F5EE;}
+.banner-ir .promo-banner-eyebrow{background:rgba(254,229,0,0.25);color:#FEE500;}
+.banner-ir p{color:rgba(247,245,238,0.78);}
+.banner-ir .promo-banner-cta{background:#FEE500;color:#3C1E1E;}
+.banner-ir::after{content:"";position:absolute;bottom:-50%;left:-10%;width:500px;height:500px;background:radial-gradient(circle,rgba(254,229,0,0.15),transparent 65%);pointer-events:none;}
+
+@media(max-width:640px){
+  .promo-banner{margin:32px 16px;border-radius:16px;}
+  .promo-banner-inner{padding:26px 24px;}
+  .banner-shop-stats{gap:16px;}
+}
+
+/* === v19 · Lifestyle Section (시착 상황별) === */
+.lifestyle-section{padding:80px 0;background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.lifestyle-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:32px;}
+.lifestyle-card{background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;transition:transform 0.25s,box-shadow 0.25s;position:relative;}
+.lifestyle-card:hover{transform:translateY(-4px);box-shadow:var(--shadow-md);}
+.lifestyle-img{width:100%;height:180px;background:linear-gradient(135deg,var(--accent-light) 0%,#D5E4DB 100%);position:relative;overflow:hidden;}
+.lifestyle-img img{width:100%;height:100%;object-fit:cover;}
+.lifestyle-img-fallback{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:56px;color:var(--accent);opacity:0.75;}
+.lifestyle-body{padding:20px 22px 24px;}
+.lifestyle-tag{display:inline-block;font-size:10px;font-weight:700;letter-spacing:0.15em;color:var(--accent);text-transform:uppercase;margin-bottom:8px;}
+.lifestyle-body h4{font-family:var(--sans);font-weight:800;font-size:16px;letter-spacing:-0.02em;color:var(--ink);margin:0 0 6px 0;}
+.lifestyle-body p{font-size:12.5px;color:var(--ink-3);line-height:1.6;margin:0;}
+
+@media(max-width:640px){
+  .lifestyle-section{padding:56px 0;}
+  .lifestyle-img{height:160px;}
+}
 .shop-brand{font-size:10.5px;font-weight:700;letter-spacing:0.15em;color:var(--accent-warm);text-transform:uppercase;margin-bottom:4px;}
 .shop-model{font-family:var(--sans);font-weight:800;font-size:17px;letter-spacing:-0.02em;color:var(--ink);margin-bottom:8px;line-height:1.25;}
 .shop-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:12px;}
@@ -3642,26 +3806,26 @@ function closeMobileMenu(){
 <script>
 /* ============ SHOP: 모델 데이터 + 필터링 + 상세 모달 ============ */
 const SHOP_MODELS = [
-  {id:1, brand:'Phonak', model:'Infinio Sphere', type:'RIC', grade:'Flagship', priceMin:320, priceMax:400, chipset:'DEEPSONIC AI', mic:'360° 적응형 빔포밍', bt:'LE Audio (ASHA)', battery:'충전식', ip:'IP68', channels:'20+', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🎯', desc:'AI 전용 칩 · 시끄러운 환경에서 음성 명료도 최고 · 실시간 환경 학습.', officialUrl:'https://www.phonak.com/', launched:'2024', popular:100},
-  {id:2, brand:'Phonak', model:'Audeo Lumity L90', type:'RIC', grade:'Advance', priceMin:270, priceMax:340, chipset:'AutoSense OS 5.0', mic:'StereoZoom 2.0', bt:'모든 기기 호환', battery:'충전식', ip:'IP68', channels:'18', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'⭐', desc:'Roger FM 시스템 지원 · 회의실·강의실 특화 · 수년간 베스트셀러.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:95},
-  {id:3, brand:'Phonak', model:'Audeo Lumity L50', type:'RIC', grade:'Mid', priceMin:220, priceMax:280, chipset:'AutoSense OS 5.0 (일부)', mic:'적응형 방향성', bt:'블루투스 듀얼', battery:'충전식', ip:'IP68', channels:'14', features:['rechargeable','bluetooth'], emoji:'🎧', desc:'Lumity 기반 · 핵심 기능 유지 · 가성비 포인트.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:80},
-  {id:4, brand:'Phonak', model:'Audeo Lumity L30', type:'RIC', grade:'Entry', priceMin:150, priceMax:200, chipset:'기본 DSP', mic:'고정 방향성', bt:'기본', battery:'충전식', ip:'IP67', channels:'10', features:['rechargeable'], emoji:'👂', desc:'입문 라인 · 조용한 환경 중심 사용자용.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:60},
-  {id:5, brand:'Oticon', model:'Intent', type:'RIC', grade:'Flagship', priceMin:270, priceMax:350, chipset:'Sirius (4D 센서)', mic:'4D 센서 기반 추적', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🧠', desc:'4D 센서 · 사용자 의도 파악 · 뇌가 소리를 자연스럽게 처리.', officialUrl:'https://www.oticon.com/', launched:'2024', popular:98},
-  {id:6, brand:'Oticon', model:'Real 1', type:'RIC', grade:'Advance', priceMin:250, priceMax:320, chipset:'Polaris R', mic:'MoreSound Intelligence 2.0', bt:'블루투스 LE', battery:'충전식', ip:'IP68', channels:'24', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔊', desc:'갑작스러운 소음(SuddenSound) 특화 · 일상 소음 대응 탁월.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:85},
-  {id:7, brand:'Oticon', model:'Real 2', type:'RIC', grade:'Mid', priceMin:170, priceMax:230, chipset:'Polaris R (일부)', mic:'오픈 사운드', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'16', features:['rechargeable','bluetooth'], emoji:'🌳', desc:'자연 음질 강조 · 가성비 모델.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:70},
-  {id:8, brand:'Signia', model:'IX 7', type:'RIC', grade:'Flagship', priceMin:280, priceMax:360, chipset:'Signia AX + IX', mic:'Dynamic Soundscape Processing', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'48', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'✨', desc:'이탈리아 디자인 + 독일 공학 · 대화 분리 기술 · 심미성 우수.', officialUrl:'https://www.signia.net/', launched:'2024', popular:92},
-  {id:9, brand:'Signia', model:'Pure Charge&Go IX', type:'RIC', grade:'Advance', priceMin:220, priceMax:290, chipset:'Signia IX', mic:'Augmented Focus', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'32', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔋', desc:'충전식 대표 · 활동량·걸음 수 트래킹 · 심미성.', officialUrl:'https://www.signia.net/', launched:'2023', popular:82},
-  {id:10, brand:'Signia', model:'Pure 3', type:'RIC', grade:'Entry', priceMin:150, priceMax:200, chipset:'기본 플랫폼', mic:'기본 방향성', bt:'블루투스 일부', battery:'일반/충전', ip:'IP67', channels:'12', features:['bluetooth'], emoji:'📻', desc:'Signia 입문 · 기본 음질 충실.', officialUrl:'https://www.signia.net/', launched:'2022', popular:55},
-  {id:11, brand:'Widex', model:'Moment Sheer sRIC', type:'RIC', grade:'Flagship', priceMin:250, priceMax:330, chipset:'ZeroDelay', mic:'PureSound', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'15', features:['rechargeable','iphone','bluetooth'], emoji:'🌊', desc:'덴마크 · 자연음 우수 · 초저지연 기술 · 음악가에게 인기.', officialUrl:'https://www.widex.com/', launched:'2023', popular:78},
-  {id:12, brand:'ReSound', model:'Nexia', type:'RIC', grade:'Advance', priceMin:200, priceMax:270, chipset:'Auracast Ready', mic:'All Access Directionality', bt:'Auracast + LE Audio', battery:'충전식', ip:'IP68', channels:'17', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'📱', desc:'Made for iPhone 선도 · Apple 생태계 완벽 호환 · Auracast 지원.', officialUrl:'https://www.resound.com/', launched:'2024', popular:88},
-  {id:13, brand:'Starkey', model:'Genesis AI', type:'RIC', grade:'Flagship', priceMin:300, priceMax:380, chipset:'Neuro Processor', mic:'Edge Mode+', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🤖', desc:'최초 AI 적용 브랜드 · 뇌파 분석 · 낙상 감지 · 통역 기능.', officialUrl:'https://www.starkey.com/', launched:'2023', popular:75},
-  {id:14, brand:'Phonak', model:'Naida Lumity', type:'BTE', grade:'Flagship', priceMin:320, priceMax:400, chipset:'SoundRecover 2', mic:'StereoZoom', bt:'LE Audio', battery:'일반', ip:'IP68', channels:'20', features:['AI','iphone','waterproof','bluetooth'], emoji:'💪', desc:'고출력 BTE · 고도~심도 난청용 · 강력한 증폭.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:65},
-  {id:15, brand:'Oticon', model:'Xceed', type:'BTE', grade:'Advance', priceMin:250, priceMax:320, chipset:'Velox S', mic:'OpenSound Navigator', bt:'블루투스', battery:'일반', ip:'IP68', channels:'64', features:['iphone','bluetooth'], emoji:'📣', desc:'초고출력 BTE · 최중증 난청용.', officialUrl:'https://www.oticon.com/', launched:'2022', popular:50},
-  {id:16, brand:'Phonak', model:'Virto Paradise', type:'ITE', grade:'Advance', priceMin:240, priceMax:310, chipset:'PRISM', mic:'맞춤 제작', bt:'블루투스', battery:'일반', ip:'IP68', channels:'16', features:['iphone','bluetooth'], emoji:'🎨', desc:'귀 모양대로 맞춤 제작 · 티타늄 쉘 옵션.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:58},
-  {id:17, brand:'Starkey', model:'Signature Series', type:'CIC', grade:'Mid', priceMin:180, priceMax:240, chipset:'Thrive', mic:'단일 방향', bt:'일부 지원', battery:'일반 소형', ip:'IP67', channels:'12', features:[], emoji:'🔎', desc:'외부에서 거의 안 보임 · 외관 최우선 사용자용.', officialUrl:'https://www.starkey.com/', launched:'2022', popular:48},
-  {id:18, brand:'Signia', model:'Silk IX', type:'CIC', grade:'Advance', priceMin:250, priceMax:320, chipset:'Signia IX', mic:'준 적응형', bt:'블루투스 iPhone', battery:'일반 소형', ip:'IP68', channels:'24', features:['iphone','bluetooth'], emoji:'🥚', desc:'즉시 착용형 CIC · 귀 본뜨기 없이 바로 · Signia IX 플랫폼.', officialUrl:'https://www.signia.net/', launched:'2024', popular:72},
-  {id:19, brand:'OTC', model:'Elehear Alpha Pro', type:'RIC', grade:'Entry', priceMin:50, priceMax:100, chipset:'기본 DSP', mic:'기본', bt:'블루투스', battery:'충전식', ip:'IP54', channels:'—', features:['rechargeable','bluetooth'], emoji:'💰', desc:'OTC 저가 대안 · 자가 피팅 가능 (의료기기 인증 별도 확인).', officialUrl:'https://www.elehear.com/', launched:'2024', popular:40},
-  {id:20, brand:'OTC', model:'딜라이트 등', type:'ITE', grade:'Entry', priceMin:20, priceMax:80, chipset:'기본', mic:'단일', bt:'없음', battery:'일반', ip:'IP54', channels:'—', features:[], emoji:'🔹', desc:'국내 저가 모델 · 경도 난청·보조 용도.', officialUrl:'#', launched:'2022', popular:30}
+  {id:1, brand:'Phonak', model:'Infinio Sphere', type:'RIC', grade:'Flagship', priceMin:320, priceMax:400, chipset:'DEEPSONIC AI', mic:'360° 적응형 빔포밍', bt:'LE Audio (ASHA)', battery:'충전식', ip:'IP68', channels:'20+', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🎯', imgSlug:'phonak-infinio-sphere', desc:'AI 전용 칩 · 시끄러운 환경에서 음성 명료도 최고 · 실시간 환경 학습.', officialUrl:'https://www.phonak.com/', launched:'2024', popular:100},
+  {id:2, brand:'Phonak', model:'Audeo Lumity L90', type:'RIC', grade:'Advance', priceMin:270, priceMax:340, chipset:'AutoSense OS 5.0', mic:'StereoZoom 2.0', bt:'모든 기기 호환', battery:'충전식', ip:'IP68', channels:'18', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'⭐', imgSlug:'phonak-audeo-lumity-l90', desc:'Roger FM 시스템 지원 · 회의실·강의실 특화 · 수년간 베스트셀러.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:95},
+  {id:3, brand:'Phonak', model:'Audeo Lumity L50', type:'RIC', grade:'Mid', priceMin:220, priceMax:280, chipset:'AutoSense OS 5.0 (일부)', mic:'적응형 방향성', bt:'블루투스 듀얼', battery:'충전식', ip:'IP68', channels:'14', features:['rechargeable','bluetooth'], emoji:'🎧', imgSlug:'phonak-audeo-lumity-l50', desc:'Lumity 기반 · 핵심 기능 유지 · 가성비 포인트.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:80},
+  {id:4, brand:'Phonak', model:'Audeo Lumity L30', type:'RIC', grade:'Entry', priceMin:150, priceMax:200, chipset:'기본 DSP', mic:'고정 방향성', bt:'기본', battery:'충전식', ip:'IP67', channels:'10', features:['rechargeable'], emoji:'👂', imgSlug:'phonak-audeo-lumity-l30', desc:'입문 라인 · 조용한 환경 중심 사용자용.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:60},
+  {id:5, brand:'Oticon', model:'Intent', type:'RIC', grade:'Flagship', priceMin:270, priceMax:350, chipset:'Sirius (4D 센서)', mic:'4D 센서 기반 추적', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🧠', imgSlug:'oticon-intent', desc:'4D 센서 · 사용자 의도 파악 · 뇌가 소리를 자연스럽게 처리.', officialUrl:'https://www.oticon.com/', launched:'2024', popular:98},
+  {id:6, brand:'Oticon', model:'Real 1', type:'RIC', grade:'Advance', priceMin:250, priceMax:320, chipset:'Polaris R', mic:'MoreSound Intelligence 2.0', bt:'블루투스 LE', battery:'충전식', ip:'IP68', channels:'24', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔊', imgSlug:'oticon-real-1', desc:'갑작스러운 소음(SuddenSound) 특화 · 일상 소음 대응 탁월.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:85},
+  {id:7, brand:'Oticon', model:'Real 2', type:'RIC', grade:'Mid', priceMin:170, priceMax:230, chipset:'Polaris R (일부)', mic:'오픈 사운드', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'16', features:['rechargeable','bluetooth'], emoji:'🌳', imgSlug:'oticon-real-2', desc:'자연 음질 강조 · 가성비 모델.', officialUrl:'https://www.oticon.com/', launched:'2023', popular:70},
+  {id:8, brand:'Signia', model:'IX 7', type:'RIC', grade:'Flagship', priceMin:280, priceMax:360, chipset:'Signia AX + IX', mic:'Dynamic Soundscape Processing', bt:'LE Audio', battery:'충전식', ip:'IP68', channels:'48', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'✨', imgSlug:'signia-ix-7', desc:'이탈리아 디자인 + 독일 공학 · 대화 분리 기술 · 심미성 우수.', officialUrl:'https://www.signia.net/', launched:'2024', popular:92},
+  {id:9, brand:'Signia', model:'Pure Charge&Go IX', type:'RIC', grade:'Advance', priceMin:220, priceMax:290, chipset:'Signia IX', mic:'Augmented Focus', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'32', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'🔋', imgSlug:'signia-pure-charge-go-ix', desc:'충전식 대표 · 활동량·걸음 수 트래킹 · 심미성.', officialUrl:'https://www.signia.net/', launched:'2023', popular:82},
+  {id:10, brand:'Signia', model:'Pure 3', type:'RIC', grade:'Entry', priceMin:150, priceMax:200, chipset:'기본 플랫폼', mic:'기본 방향성', bt:'블루투스 일부', battery:'일반/충전', ip:'IP67', channels:'12', features:['bluetooth'], emoji:'📻', imgSlug:'signia-pure-3', desc:'Signia 입문 · 기본 음질 충실.', officialUrl:'https://www.signia.net/', launched:'2022', popular:55},
+  {id:11, brand:'Widex', model:'Moment Sheer sRIC', type:'RIC', grade:'Flagship', priceMin:250, priceMax:330, chipset:'ZeroDelay', mic:'PureSound', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'15', features:['rechargeable','iphone','bluetooth'], emoji:'🌊', imgSlug:'widex-moment-sheer-sric', desc:'덴마크 · 자연음 우수 · 초저지연 기술 · 음악가에게 인기.', officialUrl:'https://www.widex.com/', launched:'2023', popular:78},
+  {id:12, brand:'ReSound', model:'Nexia', type:'RIC', grade:'Advance', priceMin:200, priceMax:270, chipset:'Auracast Ready', mic:'All Access Directionality', bt:'Auracast + LE Audio', battery:'충전식', ip:'IP68', channels:'17', features:['rechargeable','iphone','waterproof','bluetooth'], emoji:'📱', imgSlug:'resound-nexia', desc:'Made for iPhone 선도 · Apple 생태계 완벽 호환 · Auracast 지원.', officialUrl:'https://www.resound.com/', launched:'2024', popular:88},
+  {id:13, brand:'Starkey', model:'Genesis AI', type:'RIC', grade:'Flagship', priceMin:300, priceMax:380, chipset:'Neuro Processor', mic:'Edge Mode+', bt:'블루투스', battery:'충전식', ip:'IP68', channels:'24', features:['AI','rechargeable','iphone','waterproof','bluetooth'], emoji:'🤖', imgSlug:'starkey-genesis-ai', desc:'최초 AI 적용 브랜드 · 뇌파 분석 · 낙상 감지 · 통역 기능.', officialUrl:'https://www.starkey.com/', launched:'2023', popular:75},
+  {id:14, brand:'Phonak', model:'Naida Lumity', type:'BTE', grade:'Flagship', priceMin:320, priceMax:400, chipset:'SoundRecover 2', mic:'StereoZoom', bt:'LE Audio', battery:'일반', ip:'IP68', channels:'20', features:['AI','iphone','waterproof','bluetooth'], emoji:'💪', imgSlug:'phonak-naida-lumity', desc:'고출력 BTE · 고도~심도 난청용 · 강력한 증폭.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:65},
+  {id:15, brand:'Oticon', model:'Xceed', type:'BTE', grade:'Advance', priceMin:250, priceMax:320, chipset:'Velox S', mic:'OpenSound Navigator', bt:'블루투스', battery:'일반', ip:'IP68', channels:'64', features:['iphone','bluetooth'], emoji:'📣', imgSlug:'oticon-xceed', desc:'초고출력 BTE · 최중증 난청용.', officialUrl:'https://www.oticon.com/', launched:'2022', popular:50},
+  {id:16, brand:'Phonak', model:'Virto Paradise', type:'ITE', grade:'Advance', priceMin:240, priceMax:310, chipset:'PRISM', mic:'맞춤 제작', bt:'블루투스', battery:'일반', ip:'IP68', channels:'16', features:['iphone','bluetooth'], emoji:'🎨', imgSlug:'phonak-virto-paradise', desc:'귀 모양대로 맞춤 제작 · 티타늄 쉘 옵션.', officialUrl:'https://www.phonak.com/', launched:'2023', popular:58},
+  {id:17, brand:'Starkey', model:'Signature Series', type:'CIC', grade:'Mid', priceMin:180, priceMax:240, chipset:'Thrive', mic:'단일 방향', bt:'일부 지원', battery:'일반 소형', ip:'IP67', channels:'12', features:[], emoji:'🔎', imgSlug:'starkey-signature-series', desc:'외부에서 거의 안 보임 · 외관 최우선 사용자용.', officialUrl:'https://www.starkey.com/', launched:'2022', popular:48},
+  {id:18, brand:'Signia', model:'Silk IX', type:'CIC', grade:'Advance', priceMin:250, priceMax:320, chipset:'Signia IX', mic:'준 적응형', bt:'블루투스 iPhone', battery:'일반 소형', ip:'IP68', channels:'24', features:['iphone','bluetooth'], emoji:'🥚', imgSlug:'signia-silk-ix', desc:'즉시 착용형 CIC · 귀 본뜨기 없이 바로 · Signia IX 플랫폼.', officialUrl:'https://www.signia.net/', launched:'2024', popular:72},
+  {id:19, brand:'OTC', model:'Elehear Alpha Pro', type:'RIC', grade:'Entry', priceMin:50, priceMax:100, chipset:'기본 DSP', mic:'기본', bt:'블루투스', battery:'충전식', ip:'IP54', channels:'—', features:['rechargeable','bluetooth'], emoji:'💰', imgSlug:'otc-elehear-alpha-pro', desc:'OTC 저가 대안 · 자가 피팅 가능 (의료기기 인증 별도 확인).', officialUrl:'https://www.elehear.com/', launched:'2024', popular:40},
+  {id:20, brand:'OTC', model:'딜라이트 등', type:'ITE', grade:'Entry', priceMin:20, priceMax:80, chipset:'기본', mic:'단일', bt:'없음', battery:'일반', ip:'IP54', channels:'—', features:[], emoji:'🔹', imgSlug:'otc-delight', desc:'국내 저가 모델 · 경도 난청·보조 용도.', officialUrl:'#', launched:'2022', popular:30}
 ];
 
 let shopFilters = {price:'all', brand:'all', type:'all', grade:'all', feature:'all'};
@@ -3709,7 +3873,13 @@ function renderShop() {
     const gradeClass = m.grade.toLowerCase();
     return `
       <div class="shop-card" onclick="openShopModal(${m.id})">
-        <div class="shop-img">${m.emoji}</div>
+        <div class="shop-img">
+          <img src="/images/products/${m.imgSlug}.jpg" alt="${m.brand} ${m.model}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <div class="shop-img-fallback" style="display:none;">
+            <span class="emoji">${m.emoji}</span>
+            <span class="brand-tag">${m.brand}</span>
+          </div>
+        </div>
         <div class="shop-brand">${m.brand}</div>
         <div class="shop-model">${m.model}</div>
         <div class="shop-tags">
@@ -3903,7 +4073,7 @@ if (document.readyState !== 'loading') renderShop();
         <div class="academy-tags"><span class="academy-tag">Archive</span><span class="academy-tag">HearingTracker</span><span class="academy-tag">Dr. Cliff</span></div>
       </article>
       <article class="academy-card reveal">
-        <span class="academy-badge">📺 김진영 독점</span>
+        <span class="academy-badge">📺 보청기 에디터 독점</span>
         <h3>보청기 에디터 <em>500편</em></h3>
         <p>매주 신제품 리뷰 · 실제 피팅 케이스 · 청각학 15년 노하우. 유튜브 45,600 구독자가 검증한 독점 콘텐츠. 어디에도 없는 1차 정보.</p>
         <div class="academy-tags"><span class="academy-tag">Original</span><span class="academy-tag">Weekly</span><span class="academy-tag">Case</span></div>
@@ -3923,7 +4093,7 @@ if (document.readyState !== 'loading') renderShop();
       <article class="academy-card reveal">
         <span class="academy-badge">🎬 크리에이터 교육</span>
         <h3>예비 청능사 <em>실전</em></h3>
-        <p>김진영 대표가 45,600 구독까지 온 과정. 청각학 전공자·예비 청능사 대상 유튜브 운영·촬영·편집·SEO 실전. 후배 양성.</p>
+        <p>보청기 에디터가 45,600 구독까지 온 과정. 청각학 전공자·예비 청능사 대상 유튜브 운영·촬영·편집·SEO 실전. 후배 양성.</p>
         <div class="academy-tags"><span class="academy-tag">YouTube</span><span class="academy-tag">SEO</span><span class="academy-tag">Branding</span></div>
       </article>
     </div>
@@ -3986,7 +4156,7 @@ if (document.readyState !== 'loading') renderShop();
 
         <div class="trial-field">
           <label>청력도 업로드 (선택)</label>
-          <div style="background:var(--bg-3);border:2px dashed var(--line);border-radius:12px;padding:20px;text-align:center;cursor:pointer;" onclick="alert('병원·센터에서 받은 청력검사지 사진을 업로드하시면\\n센터들이 더 정확한 제안을 드릴 수 있습니다.\\n\\n개인정보는 자동 마스킹 처리됩니다.\\n\\n(n8n 연동 후 정식 작동)')">
+          <div style="background:var(--bg-3);border:2px dashed var(--line);border-radius:12px;padding:20px;text-align:center;cursor:pointer;" onclick="alert('병원·센터에서 받은 청력검사지 사진을 업로드하시면\n센터들이 더 정확한 제안을 드릴 수 있습니다.\n\n개인정보는 자동 마스킹 처리됩니다.\n\n(n8n 연동 후 정식 작동)')">
             <div style="font-size:24px;margin-bottom:6px;">📄</div>
             <div style="font-size:13px;color:var(--ink-2);font-weight:600;">검사지 사진 업로드</div>
             <div style="font-size:11px;color:var(--ink-3);margin-top:2px;">이름·주민번호 자동 마스킹</div>
@@ -4058,7 +4228,7 @@ if (document.readyState !== 'loading') renderShop();
 
         <article class="offer-card featured">
           <div class="offer-header">
-            <div class="offer-name"><em>은평</em> · 99유럽보청기 본점</div>
+            <div class="offer-name"><em>은평</em> · 청각전문 센터 A</div>
             <div class="offer-dist">1.2km</div>
           </div>
           <p class="offer-pitch">15년 청각학 전공자 직접 검사. 청력도 확인하니 Phonak Infinio 추천드려요.</p>
@@ -4508,7 +4678,7 @@ if (document.readyState !== 'loading') renderShop();
             <h3 style="font-family:var(--sans);font-weight:800;font-size:22px;letter-spacing:-0.02em;margin-bottom:8px;color:var(--bg-2);">MyHear 통해 구매 = 자동 인증</h3>
             <p style="font-size:14px;color:rgba(247,245,238,0.75);line-height:1.65;">비딩으로 매칭된 센터에서 구매하시면 자동 인증. 다른 경로로 구매하셨다면 영수증·시리얼 번호로 사후 등록 가능.</p>
           </div>
-          <button onclick="alert('🔐 Family 인증 등록\\n\\n곧 카카오톡 1초 인증으로 오픈 예정.\\n사전 등록 시 우선 안내드립니다.\\n\\n02-389-6999')" style="padding:14px 24px;background:var(--accent-gold);color:var(--ink);border:none;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;">인증 사전 등록 →</button>
+          <button onclick="alert('🔐 Family 인증 등록\n\n곧 카카오톡 1초 인증으로 오픈 예정.\n사전 등록 시 우선 안내드립니다.\n\n02-389-6999')" style="padding:14px 24px;background:var(--accent-gold);color:var(--ink);border:none;border-radius:10px;font-size:13px;font-weight:800;cursor:pointer;white-space:nowrap;">인증 사전 등록 →</button>
         </div>
       </div>
 
@@ -4627,7 +4797,7 @@ if (document.readyState !== 'loading') renderShop();
         <label>전국 모든 보청기 센터 검색 (회원사 포함)</label>
         <select id="region-finder">
           <option value="">지역을 선택하세요</option>
-          <option value="eunpyeong">서울 은평 (MyHear 본점 ✓)</option>
+          <option value="eunpyeong">서울 은평</option>
           <option value="seoul-east">서울 강동</option>
           <option value="seoul-south">서울 서초·강남</option>
           <option value="gyeonggi-north">경기 북부 (다산·의정부·고양)</option>
@@ -4657,21 +4827,21 @@ if (document.readyState !== 'loading') renderShop();
     <div class="centers-grid" style="margin-top:32px;">
       <article class="center-main reveal">
         <div>
-          <div class="hero-card-label">FLAGSHIP · 본점 ✓</div>
-          <h3><em>은평</em> · 구파발</h3>
-          <p>서울 은평구 통일로 1034<br>은평스카이뷰자이 2층 208호<br>구파발역 3번 출구 도보 1분</p>
-          <!-- 접근성 배지 -->
+          <div class="hero-card-label">SAMPLE · 센터 등록 예시 UI</div>
+          <h3><em>서울</em> · 샘플 센터 A</h3>
+          <p style="color:var(--ink-3);font-size:13px;font-style:italic;">※ 이 카드는 플랫폼 UI 샘플입니다.<br>정식 등록 센터 정보는 런칭 후 표시됩니다.<br>접근성 배지·운영정보 등 표시 예시.</p>
+          <!-- 접근성 배지 예시 -->
           <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;">
-            <span style="padding:4px 10px;background:rgba(44,95,78,0.12);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;">🚇 구파발역 1분</span>
-            <span style="padding:4px 10px;background:rgba(44,95,78,0.12);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;">🅿️ 무료 주차</span>
+            <span style="padding:4px 10px;background:rgba(44,95,78,0.12);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;">🚇 역세권</span>
+            <span style="padding:4px 10px;background:rgba(44,95,78,0.12);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;">🅿️ 주차</span>
             <span style="padding:4px 10px;background:rgba(44,95,78,0.12);color:var(--accent);border-radius:999px;font-size:11px;font-weight:600;">🛗 엘리베이터</span>
             <span style="padding:4px 10px;background:rgba(216,176,128,0.18);color:var(--accent-warm);border-radius:999px;font-size:11px;font-weight:700;">💬 상담 무료</span>
             <span style="padding:4px 10px;background:rgba(216,176,128,0.18);color:var(--accent-warm);border-radius:999px;font-size:11px;font-weight:700;">🩺 검사 무료</span>
           </div>
         </div>
         <div class="center-main-meta">
-          <div><small>전화</small><span>02.389.6999</span></div>
-          <div><small>운영</small><span>평일 10:00–17:00</span></div>
+          <div><small>연락</small><span>센터 선택 시</span></div>
+          <div><small>운영</small><span>센터별 상이</span></div>
         </div>
       </article>
       <article class="center-partner reveal" style="background:var(--accent-light);border:2px dashed var(--accent-soft);">
@@ -4691,6 +4861,18 @@ if (document.readyState !== 'loading') renderShop();
 </section>
 
 <!-- ============ ★ REVENUE MODEL ============ -->
+<!-- ============ v19 · BANNER C · IR 투자 유치 ============ -->
+<div class="promo-banner banner-ir reveal">
+  <div class="promo-banner-inner">
+    <div class="promo-banner-body">
+      <span class="promo-banner-eyebrow">💎 Pre-Seed · IR 진행 중</span>
+      <h3>"시간을 바꾸는 회사"에<br>함께 투자하시겠습니까?</h3>
+      <p>TAM 1.2조 · SAM 3,500억 · SOM 350억. 오프라인 6년 7개월 · 유튜브 45,600 구독 · 자율 AI 운영 인프라. 엔젤·VC 문의 환영.</p>
+    </div>
+    <a href="#about" class="promo-banner-cta">IR 자료 요청 →</a>
+  </div>
+</div>
+
 <section class="revenue" id="revenue">
   <div class="wrap">
     <div class="revenue-inner">
@@ -4980,7 +5162,7 @@ if (document.readyState !== 'loading') renderShop();
 <section class="editor-section">
   <div class="wrap">
     <div class="sec-head reveal">
-      <div><div class="sec-label">Meet the Editor</div><h2 class="sec-title">김진영.<br><em>15년의 청각학.</em></h2></div>
+      <div><div class="sec-label">Meet the Editor</div><h2 class="sec-title">보청기 에디터.<br><em>15년의 청각학.</em></h2></div>
     </div>
     <div class="editor-grid">
       <div class="editor-visual reveal"></div>
@@ -4988,7 +5170,7 @@ if (document.readyState !== 'loading') renderShop();
         <blockquote class="editor-quote reveal">"보청기는 단순한 제품이 아니라, 듣는 경험의 회복입니다. 같은 제품이 왜 센터마다 가격이 다른지, 정직하게 말씀드리는 것을 사명으로 합니다."</blockquote>
         <p class="editor-bio reveal">청각학 15년 전공. 포낙·오티콘·시그니아 공식 피팅. YouTube '보청기에디터' 운영자로서 500편 이상 발행, 4만 5천 구독자와 소통.</p>
         <ul class="editor-credentials reveal">
-          <li><small>EXPERIENCE</small><span>청각학 15년 · 본점 직영</span></li>
+          <li><small>EXPERIENCE</small><span>청각학 15년 · 임상 현장</span></li>
           <li><small>YOUTUBE</small><span>45,600명 · 500편</span></li>
           <li><small>NETWORK</small><span>제휴 센터 6곳</span></li>
           <li><small>PROGRAMS</small><span>청능재활 · Academy</span></li>
@@ -5254,11 +5436,11 @@ function findCenter() {
   const region = document.getElementById('region-finder').value;
   if (!region) { alert('지역을 선택해주세요.'); return; }
   const names = {
-    'eunpyeong':'은평 본점 (구파발역 도보 1분)', 'seoul-east':'강동 제휴점', 'seoul-south':'서초 제휴점',
+    'eunpyeong':'은평 제휴점', 'seoul-east':'강동 제휴점', 'seoul-south':'서초 제휴점',
     'gyeonggi':'다산 제휴점', 'daejeon':'대전 제휴점', 'busan':'부산 제휴점', 'jinju':'진주 제휴점'
   };
-  if (confirm(names[region] + '\n본점(02-389-6999)에서 지역 안내 드립니다.\n\n전화하시겠습니까?')) {
-    window.location.href = 'tel:02-389-6999';
+  if (confirm(names[region] + '\nMyHear 고객센터에서 지역 안내를 드립니다.\n\n문의하시겠습니까?')) {
+    document.getElementById('my24-toggle')?.click();
   }
 }
 
@@ -5731,7 +5913,7 @@ function submitTrial(){
   const when = document.getElementById('trial-when').value;
   const interest = document.getElementById('trial-interest').value;
   if(!region || !when || !interest){ alert('모든 항목을 선택해주세요.'); return; }
-  alert('체험 요청이 접수되었습니다!\n\n해당 지역 인증 딜러 3곳에 알림이 발송됩니다.\n24시간 내 혜택 제안이 여기에 표시됩니다.\n\n지금은 베타 운영 중이므로 99유럽보청기 본점(02-389-6999)이 직접 연락드립니다.');
+  alert('체험 요청이 접수되었습니다!\n\n해당 지역 인증 딜러 3곳에 알림이 발송됩니다.\n24시간 내 혜택 제안이 여기에 표시됩니다.\n\n베타 기간에는 MyHear 고객센터가 매칭 과정을 직접 안내드립니다.');
 }
 </script>
 
