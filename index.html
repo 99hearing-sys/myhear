@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=5">
-<title>MyHear · 난청 방치 7년을 7분으로 · 보청기 통합 플랫폼</title>
-<meta name="description" content="한국의 보청기 통합 플랫폼. 자가검사 · 모델 비교 · 전국 센터 견적까지 스마트폰 하나로. 청각학 전공 · 15년 경력 전문가가 직접 운영.">
-<meta name="keywords" content="보청기,마이히어,난청,자가검사,청력검사,포낙,오티콘,시그니아,위덱스,리사운드,스타키,보청기에디터,131만원보조금,청능재활,전국보청기,보청기가격,보청기비교">
+<title>MyHear · 난청 방치 7년을 7분으로 · 보청기·인공와우·청력보호 통합 플랫폼</title>
+<meta name="description" content="한국의 보청기·인공와우·청력보호 통합 플랫폼. 자가검사 · 모델 비교 · 전국 센터 견적까지 스마트폰 하나로. 청각학 전공 · 15년 경력 전문가가 직접 운영.">
+<meta name="keywords" content="보청기,인공와우,청력보호,청력보호구,귀마개,마이히어,난청,자가검사,청력검사,포낙,오티콘,시그니아,위덱스,리사운드,스타키,보청기에디터,131만원보조금,청능재활,전국보청기,보청기가격,보청기비교,인공와우수술,인공와우비용,난청예방">
 <meta property="og:title" content="MyHear · 난청 방치 7년을 7분으로">
-<meta property="og:description" content="스마트폰 하나로 검사·비교·견적까지">
+<meta property="og:description" content="보청기·인공와우·청력보호 통합 플랫폼 · 스마트폰 하나로 검사·비교·견적까지">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://myhear.pages.dev">
 <link rel="canonical" href="https://myhear.pages.dev">
@@ -25,7 +25,7 @@
 <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
 
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"MyHear","alternateName":["마이히어","보청기 에디터"],"description":"한국의 보청기 통합 플랫폼","url":"https://myhear.pages.dev","telephone":"+82-2-389-6999","email":"99hearing@gmail.com","taxID":"126-34-00739","foundingDate":"2019-09-09","address":{"@type":"PostalAddress","streetAddress":"통일로 1034, 2층 208호","addressLocality":"은평구","addressRegion":"서울특별시","postalCode":"03426","addressCountry":"KR"},"founder":{"@type":"Person","name":"김진영","jobTitle":"청각학 전공 · 보청기 분야 15년"},"sameAs":["https://www.youtube.com/@hearing_device_editor"]}
+{"@context":"https://schema.org","@type":["LocalBusiness","MedicalBusiness"],"name":"MyHear","alternateName":["마이히어","보청기 에디터"],"description":"한국의 보청기·인공와우·청력보호 통합 플랫폼","url":"https://myhear.pages.dev","telephone":"+82-2-389-6999","email":"99hearing@gmail.com","taxID":"126-34-00739","foundingDate":"2019-09-09","address":{"@type":"PostalAddress","streetAddress":"통일로 1034, 2층 208호","addressLocality":"은평구","addressRegion":"서울특별시","postalCode":"03426","addressCountry":"KR"},"founder":{"@type":"Person","name":"김진영","jobTitle":"청각학 전공 · 보청기 분야 15년"},"sameAs":["https://www.youtube.com/@hearing_device_editor"]}
 </script>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
@@ -700,17 +700,68 @@ body { font-size: 17px; line-height: 1.75; }
   small { font-size: 13px !important; }
 }
 
-/* 글자 크기 토글 클래스 */
-body.fz-small { font-size: 15px; }
-body.fz-normal { font-size: 17px; }
-body.fz-large { font-size: 19px; }
-body.fz-xlarge { font-size: 22px; }
+/* 글자 크기 토글 클래스 - 차이 극적으로 (시니어 친화) */
+body.fz-small { font-size: 14px; line-height: 1.6; }
+body.fz-normal { font-size: 17px; line-height: 1.7; }
+body.fz-large { font-size: 22px; line-height: 1.75; }
+body.fz-xlarge { font-size: 28px; line-height: 1.8; }
 @media (max-width: 720px) {
-  body.fz-small { font-size: 15px; }
+  body.fz-small { font-size: 14px; }
   body.fz-normal { font-size: 17px; }
-  body.fz-large { font-size: 20px; }
-  body.fz-xlarge { font-size: 23px; }
+  body.fz-large { font-size: 22px; }
+  body.fz-xlarge { font-size: 28px; }
 }
+
+/* fz-* 모드별 주요 텍스트 강제 확대 (px 단위 텍스트도 변하도록) */
+/* Hero - 차이 극적으로 */
+body.fz-small .hero-title { font-size: clamp(24px, 4vw, 44px) !important; }
+body.fz-large .hero-title { font-size: clamp(44px, 7vw, 80px) !important; }
+body.fz-xlarge .hero-title { font-size: clamp(56px, 9vw, 100px) !important; }
+body.fz-small .hero-sub { font-size: 13px !important; line-height: 1.55 !important; }
+body.fz-large .hero-sub { font-size: 22px !important; line-height: 1.7 !important; }
+body.fz-xlarge .hero-sub { font-size: 28px !important; line-height: 1.7 !important; }
+
+/* 섹션 */
+body.fz-small .section-title { font-size: clamp(20px, 3vw, 30px) !important; }
+body.fz-large .section-title { font-size: clamp(34px, 4.5vw, 52px) !important; }
+body.fz-xlarge .section-title { font-size: clamp(42px, 5.5vw, 64px) !important; }
+body.fz-small .section-sub { font-size: 12.5px !important; }
+body.fz-large .section-sub { font-size: 20px !important; }
+body.fz-xlarge .section-sub { font-size: 26px !important; }
+
+/* 햄버거 메뉴 텍스트 (즉각 시각 피드백) */
+body.fz-small .mm-link { font-size: 13px !important; }
+body.fz-large .mm-link { font-size: 20px !important; }
+body.fz-xlarge .mm-link { font-size: 25px !important; }
+body.fz-small .mm-link small { font-size: 9.5px !important; }
+body.fz-large .mm-link small { font-size: 15px !important; }
+body.fz-xlarge .mm-link small { font-size: 19px !important; }
+body.fz-small .mm-title { font-size: 9.5px !important; }
+body.fz-large .mm-title { font-size: 14px !important; }
+body.fz-xlarge .mm-title { font-size: 17px !important; }
+
+/* 버튼·CTA */
+body.fz-small .btn { font-size: 12.5px !important; padding: 12px 22px !important; }
+body.fz-large .btn { font-size: 18px !important; padding: 17px 30px !important; }
+body.fz-xlarge .btn { font-size: 22px !important; padding: 20px 36px !important; }
+
+/* 카드·스텝 */
+body.fz-small .step-title, body.fz-small .cl-name { font-size: 14px !important; }
+body.fz-large .step-title, body.fz-large .cl-name { font-size: 20px !important; }
+body.fz-xlarge .step-title, body.fz-xlarge .cl-name { font-size: 25px !important; }
+body.fz-small .step-desc, body.fz-small .cl-meta { font-size: 12px !important; }
+body.fz-large .step-desc, body.fz-large .cl-meta { font-size: 16.5px !important; }
+body.fz-xlarge .step-desc, body.fz-xlarge .cl-meta { font-size: 21px !important; }
+
+/* 푸터 */
+body.fz-small .f-tag, body.fz-small .f-list a { font-size: 12px !important; }
+body.fz-large .f-tag, body.fz-large .f-list a { font-size: 17px !important; }
+body.fz-xlarge .f-tag, body.fz-xlarge .f-list a { font-size: 21px !important; }
+
+/* my24 챗봇 알람·라벨 */
+body.fz-small .my24-pill { font-size: 13px !important; }
+body.fz-large .my24-pill { font-size: 17.5px !important; }
+body.fz-xlarge .my24-pill { font-size: 21px !important; }
 
 /* 우측 하단 글자 크기 토글 floating */
 .fz-control {
@@ -829,9 +880,11 @@ html, body {
   text-align: center;
 }
 .mm-fz-btn.active {
-  background: var(--c-blue);
-  color: #fff;
-  border-color: var(--c-blue);
+  background: var(--c-coral) !important;
+  color: #fff !important;
+  border-color: var(--c-coral) !important;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(255,107,74,.3);
 }
 .mm-fz-btn-l1 { font-size: 12px; }
 .mm-fz-btn-l2 { font-size: 14px; }
@@ -851,25 +904,265 @@ html, body {
   .search-box svg { width: 16px !important; height: 16px !important; }
 }
 
-/* 모바일 Hero 아래 글자 크기 안내 (햄버거 발견 유도) */
-.fz-hint-mobile { display: none; }
+/* 모바일 Hero 아래 글자 크기 안내 (사용 안 함 - 최상단 바로 대체) */
+.fz-hint-mobile { display: none !important; }
+
+/* ============ Hero 카테고리 4버튼 후킹 박스 (DB 분기 비즈니스 모델) ============ */
+.cat-pick-hero {
+  margin-top: 24px;
+  padding: 22px 22px 24px;
+  background: linear-gradient(135deg, var(--c-blue-bg) 0%, var(--c-teal-bg) 100%);
+  border-radius: 20px;
+  border: 1.5px solid var(--c-line);
+  box-shadow: 0 6px 20px rgba(10,107,130,.08);
+}
+.cat-pick-title {
+  font-size: 16px;
+  font-weight: 900;
+  color: var(--c-ink);
+  letter-spacing: -.02em;
+  margin-bottom: 4px;
+  text-align: center;
+}
+.cat-pick-sub {
+  font-size: 12.5px;
+  color: var(--c-ink-3);
+  margin-bottom: 16px;
+  text-align: center;
+}
+.cat-pick-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
 @media (max-width: 720px) {
-  .fz-hint-mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-    margin-top: 14px;
-    padding: 10px 14px;
-    background: var(--c-blue-bg);
-    border-radius: 999px;
+  .cat-pick-hero { padding: 18px 14px 20px; }
+  .cat-pick-grid { grid-template-columns: repeat(2, 1fr); gap: 8px; }
+}
+.cat-pick-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 16px 10px;
+  background: var(--c-white);
+  border: 2px solid var(--c-line);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all .2s;
+  font-family: inherit;
+  text-align: center;
+}
+.cat-pick-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,.10);
+}
+.cat-pick-btn.cat-pick-aid:hover { border-color: var(--c-blue); }
+.cat-pick-btn.cat-pick-cochlear:hover { border-color: var(--c-teal); }
+.cat-pick-btn.cat-pick-protection:hover { border-color: var(--c-gold); }
+.cat-pick-btn.cat-pick-ai:hover { border-color: var(--c-coral); }
+.cat-emoji {
+  font-size: 32px;
+  line-height: 1;
+}
+@media (max-width: 480px) {
+  .cat-emoji { font-size: 28px; }
+}
+.cat-pick-btn strong {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--c-ink);
+  letter-spacing: -.02em;
+}
+.cat-pick-btn small {
+  font-size: 11px;
+  color: var(--c-ink-3);
+  font-weight: 500;
+}
+
+/* ============ 카카오 채널 친구 추가 floating (좌측 하단) ============ */
+.kakao-channel-fab {
+  position: fixed;
+  bottom: 24px;
+  left: 24px;
+  z-index: 50;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px 13px 16px;
+  background: #FEE500;
+  color: #181600;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: -.01em;
+  box-shadow: 0 6px 20px rgba(254, 229, 0, .45), 0 2px 6px rgba(0,0,0,.08);
+  text-decoration: none;
+  transition: all .2s;
+  position: fixed;
+  border: none;
+  cursor: pointer;
+}
+.kakao-channel-fab:hover {
+  transform: translateY(-2px) scale(1.02);
+  color: #181600;
+  box-shadow: 0 10px 28px rgba(254, 229, 0, .55), 0 4px 10px rgba(0,0,0,.12);
+}
+.kakao-channel-text {
+  white-space: nowrap;
+}
+.kakao-channel-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--c-coral);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2.5px solid #fff;
+  animation: pulse-coral 1.6s infinite;
+  box-shadow: 0 2px 6px rgba(255,107,74,.3);
+}
+@media (max-width: 720px) {
+  .kakao-channel-fab {
+    bottom: 80px;
+    left: 14px;
+    padding: 11px 16px 11px 12px;
     font-size: 12.5px;
-    color: var(--c-blue-d);
-    font-weight: 700;
-    cursor: pointer;
-    border: 1px solid var(--c-line);
   }
-  .fz-hint-mobile:hover { background: var(--c-teal-bg); }
+  .kakao-channel-text {
+    max-width: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+@media (max-width: 380px) {
+  .kakao-channel-fab .kakao-channel-text {
+    display: none;
+  }
+}
+
+/* ============ 사이트 최상단 글자 크기 조절 바 (시니어용 · 항상 표시) ============ */
+.fz-topbar {
+  background: linear-gradient(135deg, #FFF4E6 0%, var(--c-coral-bg) 100%);
+  border-bottom: 2px solid var(--c-coral);
+  padding: 14px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+  position: relative;
+}
+.fz-topbar::before {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--c-coral), transparent);
+  animation: fz-shine 3s ease-in-out infinite;
+}
+@keyframes fz-shine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+.fz-topbar-prompt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--c-ink);
+  letter-spacing: -.01em;
+}
+.fz-topbar-emoji {
+  font-size: 22px;
+  animation: fz-look 2.5s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes fz-look {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+.fz-topbar-prompt strong {
+  color: var(--c-coral-d);
+  font-weight: 900;
+  background: rgba(255, 255, 255, .8);
+  padding: 1px 8px;
+  border-radius: 6px;
+}
+.fz-topbar-arrow {
+  font-size: 18px;
+  color: var(--c-coral-d);
+  font-weight: 900;
+  animation: fz-arrow 1.5s ease-in-out infinite;
+  display: inline-block;
+}
+@keyframes fz-arrow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+.fz-topbar-label {
+  display: none;
+}
+.fz-topbar-buttons {
+  display: flex;
+  gap: 6px;
+}
+.fz-tb-btn {
+  padding: 10px 18px;
+  background: var(--c-white);
+  border: 2px solid var(--c-line-d);
+  border-radius: 999px;
+  font-weight: 800;
+  color: var(--c-ink-2);
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+  min-width: 44px;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,.05);
+}
+.fz-tb-btn:hover { 
+  border-color: var(--c-coral); 
+  color: var(--c-coral-d); 
+  transform: translateY(-1px);
+}
+.fz-tb-btn.active {
+  background: var(--c-coral) !important;
+  color: #fff !important;
+  border-color: var(--c-coral) !important;
+  transform: scale(1.12);
+  box-shadow: 0 6px 16px rgba(255,107,74,.4);
+}
+.fz-tb-btn:nth-child(1) { font-size: 13px; }
+.fz-tb-btn:nth-child(2) { font-size: 16px; }
+.fz-tb-btn:nth-child(3) { font-size: 20px; }
+.fz-tb-btn:nth-child(4) { font-size: 25px; }
+@media (max-width: 720px) {
+  .fz-topbar { padding: 12px 12px; gap: 12px; flex-direction: column; }
+  .fz-topbar-prompt { font-size: 13.5px; flex-wrap: wrap; justify-content: center; }
+  .fz-topbar-emoji { font-size: 19px; }
+  .fz-tb-btn { padding: 9px 14px; min-width: 38px; }
+  .fz-tb-btn:nth-child(1) { font-size: 12px; }
+  .fz-tb-btn:nth-child(2) { font-size: 14px; }
+  .fz-tb-btn:nth-child(3) { font-size: 17px; }
+  .fz-tb-btn:nth-child(4) { font-size: 21px; }
+}
+@media (max-width: 480px) {
+  .fz-topbar { padding: 10px 10px; gap: 10px; }
+  .fz-topbar-prompt { font-size: 12.5px; gap: 6px; }
+  .fz-topbar-arrow { font-size: 15px; }
+  .fz-tb-btn { padding: 8px 12px; min-width: 34px; }
 }
 </style>
 </head>
@@ -1029,6 +1322,39 @@ html, body {
             <div class="sd-card-row"><span class="sd-card-k">예산</span><span class="sd-card-v" id="sumBudget">-</span></div>
             <div class="sd-card-row"><span class="sd-card-k">지역</span><span class="sd-card-v" id="sumRegion">-</span></div>
           </div>
+          
+          <!-- 카톡 채널 친구 추가 강조 -->
+          <div style="background:linear-gradient(135deg,#FFF8B0,#FEE500);border-radius:14px;padding:16px;margin-bottom:14px;text-align:left;border:2px solid #FEE500;">
+            <div style="font-size:14px;font-weight:900;color:#181600;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+              💬 견적 도착 즉시 알림 받기
+            </div>
+            <div style="font-size:12px;color:#5A4A00;margin-bottom:12px;line-height:1.5;">
+              카카오톡으로 견적이 오는 즉시 알려드려요 · 친구추가만 하시면 끝
+            </div>
+            <a href="http://pf.kakao.com/_xxxxxxx" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;background:#181600;color:#FEE500;border-radius:10px;font-size:14px;font-weight:900;text-decoration:none;">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.86 1.93 5.36 4.78 6.7l-1.18 4.16c-.13.45.36.81.74.55l5.07-3.36c.2.01.39.02.59.02 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/></svg>
+              + MyHear 카톡 채널 친구추가
+            </a>
+          </div>
+
+          <!-- 개인정보 수집·이용 동의 (DB 합법 수집) -->
+          <div style="background:var(--c-off);border-radius:12px;padding:14px;margin-bottom:14px;text-align:left;border:1px solid var(--c-line);">
+            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:12.5px;color:var(--c-ink-2);line-height:1.5;">
+              <input type="checkbox" id="agreePrivacy" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;cursor:pointer;">
+              <span>
+                <strong>(필수)</strong> 개인정보 수집·이용 동의 ·
+                견적 매칭을 위해 입력 정보가 익명 처리되어 센터에 전달돼요. <a href="javascript:void(0)" onclick="alert('전체 약관 페이지는 다음 업데이트에서 연결 예정')" style="color:var(--c-blue);text-decoration:underline;">[전문보기]</a>
+              </span>
+            </label>
+            <label style="display:flex;align-items:flex-start;gap:8px;cursor:pointer;font-size:12.5px;color:var(--c-ink-2);line-height:1.5;margin-top:8px;">
+              <input type="checkbox" id="agreeMarketing" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;cursor:pointer;">
+              <span>
+                <strong>(선택)</strong> 마케팅 정보 수신 동의 ·
+                견적 알림·신제품·보조금 안내를 카카오톡으로 받아요.
+              </span>
+            </label>
+          </div>
+
           <p style="font-size:11.5px;color:var(--c-ink-3);line-height:1.5;margin-bottom:12px;">
             ⚖️ 모든 정보는 <strong>익명</strong>으로 처리돼요.<br>
             센터끼리는 서로 가격을 못 봐요 · 제안은 회원님만 확인 가능.
@@ -1145,6 +1471,21 @@ html, body {
   </div>
 </div>
 
+<!-- ============ 사이트 최상단 글자 크기 조절 바 (시니어용 · 항상 표시) ============ -->
+<div class="fz-topbar" role="group" aria-label="글자 크기 조절">
+  <div class="fz-topbar-prompt">
+    <span class="fz-topbar-emoji">👀</span>
+    <span class="fz-topbar-text">글자가 작아 보이세요? <strong>크게</strong> 바꿔보세요</span>
+    <span class="fz-topbar-arrow">→</span>
+  </div>
+  <div class="fz-topbar-buttons">
+    <button class="fz-tb-btn" onclick="setFz('small',event)" aria-label="작게">가</button>
+    <button class="fz-tb-btn active" onclick="setFz('normal',event)" aria-label="보통">가</button>
+    <button class="fz-tb-btn" onclick="setFz('large',event)" aria-label="크게">가</button>
+    <button class="fz-tb-btn" onclick="setFz('xlarge',event)" aria-label="아주 크게">가</button>
+  </div>
+</div>
+
 <!-- ============ NAV ============ -->
 <header class="topbar">
   <div class="topbar-inner">
@@ -1154,7 +1495,7 @@ html, body {
     </a>
     <div class="search-box">
       <svg aria-hidden="true"><use href="#iconSearch"/></svg>
-      <input type="search" id="searchInput" placeholder="보청기·기능·브랜드 검색" autocomplete="off">
+      <input type="search" id="searchInput" placeholder="보청기·인공와우·청력보호·브랜드 검색" autocomplete="off">
     </div>
     <nav class="nav-desktop" aria-label="주요 메뉴">
       <a href="#guide" class="nav-link">📖 가이드</a>
@@ -1199,13 +1540,13 @@ html, body {
     </div>
     <div class="mm-sec">
       <div class="mm-title">📖 처음 사는 분 필수</div>
-      <a href="#guide" class="mm-link" onclick="closeNav()">보청기 선택 완전 가이드 <small>용어·브랜드·추천</small></a>
+      <a href="#guide" class="mm-link" onclick="closeNav()">보청기·인공와우·청력보호 가이드 <small>용어·브랜드·추천</small></a>
     </div>
     <div class="mm-sec">
       <div class="mm-title">🔥 지금 MyHear에서</div>
       <a href="javascript:void(0)" onclick="openSignup('customer');closeNav();" class="mm-link" style="background:linear-gradient(135deg,var(--c-coral),var(--c-coral-d));color:#fff;font-weight:800;">+ 내 견적 신청 (30초) <small style="color:rgba(255,255,255,.8);">타이핑 없이 클릭만</small></a>
       <a href="#bids" class="mm-link" onclick="closeNav()">실시간 견적 현황 <small>47건 진행 중</small></a>
-      <a href="#trends" class="mm-link" onclick="closeNav()">🌍 보청기 트렌드 <small>국내외 핫이슈</small></a>
+      <a href="#trends" class="mm-link" onclick="closeNav()">🌍 청각 트렌드 <small>국내외 핫이슈</small></a>
       <a href="#live" class="mm-link" onclick="closeNav()">실시간 대시보드 <small>접속자·검색 랭킹</small></a>
     </div>
     <div class="mm-sec">
@@ -1258,18 +1599,47 @@ html, body {
         </h1>
         <p class="hero-sub reveal">
           스마트폰 하나로 <strong>검사 · 비교 · 견적</strong>까지.<br>
-          청각학 전공 · 15년 경력 전문가가 만든 보청기 통합 플랫폼. <span style="color:var(--c-ink-3);font-size:14px;">실거래 140만원~720만원 ↓</span>
+          청각학 전공 · 15년 경력 전문가가 만든 <strong>보청기·인공와우·청력보호</strong> 통합 플랫폼. <span style="color:var(--c-ink-3);font-size:14px;">실거래 140만원~720만원 ↓</span>
         </p>
         <div class="hero-actions reveal">
           <a href="javascript:void(0)" onclick="openSignup('customer')" class="btn btn-primary">+ 내 견적 신청 (30초) →</a>
           <a href="javascript:void(0)" onclick="openChat()" class="btn btn-secondary">💬 AI에게 물어보기</a>
         </div>
+
+        <!-- 카테고리 4버튼 후킹 박스 (DB 분기 비즈니스 모델 진입점) -->
+        <div class="cat-pick-hero reveal">
+          <div class="cat-pick-title">👋 어떤 도움이 필요하세요?</div>
+          <div class="cat-pick-sub">하나만 누르시면 차근차근 안내해드려요</div>
+          <div class="cat-pick-grid">
+            <button class="cat-pick-btn cat-pick-aid" onclick="openSignupCat('hearing')">
+              <span class="cat-emoji">🎧</span>
+              <strong>보청기</strong>
+              <small>견적·비교·구매</small>
+            </button>
+            <button class="cat-pick-btn cat-pick-cochlear" onclick="openSignupCat('cochlear')">
+              <span class="cat-emoji">🧠</span>
+              <strong>인공와우</strong>
+              <small>정보·병원·자료</small>
+            </button>
+            <button class="cat-pick-btn cat-pick-protection" onclick="openSignupCat('protection')">
+              <span class="cat-emoji">🛡</span>
+              <strong>청력보호구</strong>
+              <small>음악·사격·수면</small>
+            </button>
+            <button class="cat-pick-btn cat-pick-ai" onclick="openChat()">
+              <span class="cat-emoji">🤖</span>
+              <strong>AI 상담</strong>
+              <small>24시간 무료</small>
+            </button>
+          </div>
+        </div>
+
         <div class="hero-trust reveal">
           <div class="hero-trust-item">📺 YouTube <strong>45,600</strong> 구독</div>
           <div class="hero-trust-item">⚖️ 6대 브랜드 <strong>중립</strong></div>
           <div class="hero-trust-item">🏥 <strong>ISO·NAL·HINT</strong> 표준</div>
         </div>
-        <button class="fz-hint-mobile" onclick="toggleNav()">🔤 글자가 작으세요? 메뉴에서 크게 보기 →</button>
+        <button class="fz-hint-mobile" onclick="toggleNav()" aria-hidden="true" style="display:none;">🔤 글자가 작으세요?</button>
       </div>
       <div class="hero-visual reveal">
         <div class="hero-visual-inner">
@@ -1508,8 +1878,8 @@ html, body {
 <section class="trend-sec" id="trends">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="section-eyebrow">🌍 보청기 트렌드</span>
-      <h2 class="section-title">지금 세계가 <em>주목하는</em><br>보청기 이슈.</h2>
+      <span class="section-eyebrow">🌍 청각 트렌드</span>
+      <h2 class="section-title">지금 세계가 <em>주목하는</em><br>청각 이슈.</h2>
       <p class="section-sub">국내외 전문 사이트·유튜브·블로그에서 뜨거운 주제를 한 자리에. 출처 링크로 바로 이동.</p>
     </div>
 
@@ -1519,6 +1889,8 @@ html, body {
       <button class="trend-tab" onclick="filterTrend('naver', this)">📝 네이버 블로그</button>
       <button class="trend-tab" onclick="filterTrend('global', this)">🌐 글로벌 전문</button>
       <button class="trend-tab" onclick="filterTrend('editor', this)">🎙 보청기 에디터</button>
+      <button class="trend-tab" onclick="filterTrend('cochlear', this)">🧠 인공와우</button>
+      <button class="trend-tab" onclick="filterTrend('protection', this)">🛡 청력보호구</button>
     </div>
 
     <div class="trend-list reveal" id="trendList">
@@ -1538,7 +1910,7 @@ html, body {
   <div class="wrap">
     <div class="section-head reveal">
       <span class="section-eyebrow">📖 처음 사는 분을 위한</span>
-      <h2 class="section-title">보청기 고를 때<br>이거 <em>모르면 손해예요.</em></h2>
+      <h2 class="section-title">보청기·인공와우·청력보호<br>이거 <em>모르면 손해예요.</em></h2>
       <p class="section-sub">채널? 플랫폼? SNR? · 단어 하나하나 쉽게 풀어드리고<br>브랜드·등급·상황별로 어떻게 고르는지 한눈에 정리했어요.</p>
       <div class="guide-intro">
         <div class="camera-analogy">📷 <strong>카메라 살 때</strong>처럼 생각해보세요<br>카메라도 "화소 많으면 좋다" 가 끝이 아니죠 · 센서 크기·렌즈·손떨림보정 등 여러 요소가 있듯, <strong>보청기도 6가지 기준</strong>이 있어요</div>
@@ -1553,6 +1925,8 @@ html, body {
       <button class="guide-tab" onclick="switchGuide('brands', this)">🏷 브랜드·플랫폼</button>
       <button class="guide-tab" onclick="switchGuide('types', this)">👂 유형별 기술</button>
       <button class="guide-tab" onclick="switchGuide('scenarios', this)">🎯 나라면 뭐 고를까</button>
+      <button class="guide-tab" onclick="switchGuide('cochlear', this)">🧠 인공와우</button>
+      <button class="guide-tab" onclick="switchGuide('protection', this)">🛡 청력보호구</button>
     </div>
 
     <!-- A. 용어 해설 -->
@@ -1683,7 +2057,7 @@ html, body {
           <div class="gloss-term">
             <div class="gloss-ico">🏥</div>
             <div>
-              <div class="gloss-name">이명 치료 기능</div>
+              <div class="gloss-name">이명 완화 기능</div>
               <div class="gloss-en">Tinnitus Management</div>
             </div>
           </div>
@@ -2274,9 +2648,303 @@ html, body {
       </div>
 
       <div style="margin-top:22px;padding:20px 24px;background:linear-gradient(135deg,var(--c-blue-bg),var(--c-teal-bg));border-radius:var(--r-lg);text-align:center;">
-        <div style="font-size:15px;font-weight:800;color:var(--c-blue-d);margin-bottom:8px;">🎯 내 상황에 맞는 보청기가 궁금하세요?</div>
+        <div style="font-size:15px;font-weight:800;color:var(--c-blue-d);margin-bottom:8px;">🎯 내 상황에 맞는 청각 솔루션이 궁금하세요?</div>
         <div style="font-size:13px;color:var(--c-ink-2);margin-bottom:14px;line-height:1.6;">6단계 클릭 · 30초면 충분해요 · 전국 센터가 익명 경쟁 입찰</div>
         <button onclick="openSignup('customer')" style="padding:12px 28px;background:var(--c-coral);color:#fff;border-radius:999px;font-size:14px;font-weight:800;border:none;cursor:pointer;box-shadow:var(--sh-coral);">+ 내 견적 신청 →</button>
+      </div>
+    </div>
+
+    <!-- ============ 인공와우 가이드 (NEW v28.7) ============ -->
+    <div class="guide-panel" id="panel-cochlear">
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="display:inline-block;padding:14px 22px;background:var(--c-gold-bg);border-radius:14px;font-size:13.5px;color:var(--c-ink-2);line-height:1.6;max-width:680px;">
+          🧠 <strong>인공와우란?</strong> 보청기로도 안 들리는 고도·심도 난청에 적용하는 청각 장치<br>
+          <span style="font-size:11.5px;color:var(--c-ink-3);">수술이 필요하지만 복지·보험 적용으로 본인부담 약 400만원 수준</span>
+        </div>
+      </div>
+
+      <div class="glossary-grid reveal">
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">🔍</div>
+            <div>
+              <div class="gloss-name">인공와우 vs 보청기</div>
+              <div class="gloss-en">Cochlear Implant vs Hearing Aid</div>
+            </div>
+          </div>
+          <div class="gloss-def">보청기는 외부 소리 증폭, 인공와우는 직접 청각신경 자극.</div>
+          <div class="gloss-analogy">📷 <strong>안경 vs 라식</strong>과 비슷한 차이 · 보청기로 부족할 때 다음 단계</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">📊</div>
+            <div>
+              <div class="gloss-name">적응 기준</div>
+              <div class="gloss-en">Candidacy</div>
+            </div>
+          </div>
+          <div class="gloss-def">PTA 70dB 이상 · 어음인지도(WRS) 50% 이하 · 보청기로 6개월 이상 적응 후에도 효과 부족.</div>
+          <div class="gloss-analogy">🩺 <strong>이비인후과 정밀 검사 필수</strong> · 자가검사 X</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">⚙️</div>
+            <div>
+              <div class="gloss-name">3대 제조사</div>
+              <div class="gloss-en">Major Brands</div>
+            </div>
+          </div>
+          <div class="gloss-def">코클리어(호주), 메드엘(오스트리아), AB(미국) 3사가 글로벌 점유율 95%+.</div>
+          <div class="gloss-analogy">🏷 <strong>세 회사 모두 한국 정식 수입</strong> · 병원·의료진 선호도에 따라 선택</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">💰</div>
+            <div>
+              <div class="gloss-name">비용·보조금</div>
+              <div class="gloss-en">Cost & Reimbursement</div>
+            </div>
+          </div>
+          <div class="gloss-def">청각장애 등록 시 건강보험·복지 적용으로 본인부담이 크게 줄어듦 · 정확한 비용은 병원·시기에 따라 다르며 진료 시 안내.</div>
+          <div class="gloss-analogy">🏥 <strong>대학병원 이비인후과 상담 필수</strong> · 사전 승인 절차 진행</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">⏱</div>
+            <div>
+              <div class="gloss-name">수술 + 적응 기간</div>
+              <div class="gloss-en">Surgery & Activation</div>
+            </div>
+          </div>
+          <div class="gloss-def">수술 3~5일 입원 · 4~6주 후 외부 어음처리기 활성화 · 6개월~1년 청능재활 필요.</div>
+          <div class="gloss-analogy">🌱 <strong>장기 적응 필수</strong> · 활성화 직후엔 "삐삐" 소리만 · 점차 말소리 인식</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">👨‍⚕️</div>
+            <div>
+              <div class="gloss-name">수술 가능 병원</div>
+              <div class="gloss-en">Surgical Centers</div>
+            </div>
+          </div>
+          <div class="gloss-def">서울아산·삼성서울·세브란스·서울대·서울성모 등 주요 상급종합병원 이비인후과.</div>
+          <div class="gloss-analogy">🏛 <strong>진단 → 적응 평가 → 수술 → 재활</strong> 전 과정 한 병원에서</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">🎓</div>
+            <div>
+              <div class="gloss-name">소아 vs 성인</div>
+              <div class="gloss-en">Pediatric vs Adult</div>
+            </div>
+          </div>
+          <div class="gloss-def">소아는 1세부터 가능 · 빨리 할수록 언어 발달 유리 · 성인은 어음 인지도 낮을 때 권장.</div>
+          <div class="gloss-analogy">👶 <strong>어릴수록 청각 신경 발달 잠재력 높음</strong> · 신생아 청력검사 중요</div>
+        </div>
+
+        <div class="gloss-card">
+          <div class="gloss-term">
+            <div class="gloss-ico">🔋</div>
+            <div>
+              <div class="gloss-name">최신 기술</div>
+              <div class="gloss-en">Latest Tech</div>
+            </div>
+          </div>
+          <div class="gloss-def">방수·블루투스 직접 연결·MRI 호환·충전식 배터리·AI 환경 자동 인식.</div>
+          <div class="gloss-analogy">📱 <strong>2024~2025 신모델은 보청기 수준 기능</strong> · 코클리어 N8, 메드엘 Sonnet2 등</div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:24px;padding:20px 24px;background:linear-gradient(135deg,var(--c-blue-bg),var(--c-teal-bg));border-radius:var(--r-lg);">
+        <div style="font-size:14px;font-weight:800;color:var(--c-blue-d);margin-bottom:10px;">💡 보청기와 인공와우 선택 가이드</div>
+        <div style="font-size:12.5px;color:var(--c-ink-2);line-height:1.7;">
+          • <strong>경도~중도 난청</strong>: 보청기로 충분<br>
+          • <strong>고도 난청 (PTA 60~80dB)</strong>: 보청기 우선 시도, 효과 부족 시 인공와우 평가<br>
+          • <strong>심도 난청 (PTA 80dB+)</strong>: 인공와우 권장 · 단, 청신경 살아있어야 적응 가능<br>
+          • <strong>편측 난청</strong>: 한쪽만 인공와우 + 다른 쪽 보청기 가능
+        </div>
+      </div>
+
+      <div style="margin-top:18px;padding:14px 20px;background:var(--c-coral-bg);border-radius:var(--r);font-size:12.5px;color:var(--c-coral-d);text-align:center;">
+        💡 <strong>MyHear에서 인공와우 정보가 더 필요하시면</strong> · <a href="javascript:void(0)" onclick="openChat()" style="color:var(--c-coral-d);font-weight:800;text-decoration:underline;">my24 AI 상담</a>으로 물어보세요
+      </div>
+    </div>
+
+    <!-- ============ 청력보호구 가이드 (NEW v28.7) ============ -->
+    <div class="guide-panel" id="panel-protection">
+      <div style="text-align:center;margin-bottom:24px;">
+        <div style="display:inline-block;padding:14px 22px;background:var(--c-teal-bg);border-radius:14px;font-size:13.5px;color:var(--c-ink-2);line-height:1.6;max-width:680px;">
+          🛡 <strong>청력보호구</strong>는 시끄러운 환경에서 청력을 미리 지키는 도구<br>
+          <span style="font-size:11.5px;color:var(--c-ink-3);">소음성 난청은 미리 예방하는 것이 최선 · 직업·취미에 맞춰 선택</span>
+        </div>
+      </div>
+
+      <div class="scenario-grid reveal">
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">🎵</div>
+            <div>
+              <div class="scn-title">음악가·DJ·콘서트 관람</div>
+              <div class="scn-who">고음질 보존하면서 음량만 차단</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: 평탄한 주파수 감쇠 · NRR 15~22dB · 재사용형</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>Etymotic ER20XS</strong> · <strong>Loop Experience</strong> · <strong>EarPeace Music</strong>
+            </div>
+            <span class="scn-tier tier-flagship">🎧 고음질 보존</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>3~10만원대</strong></div>
+        </div>
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">🎯</div>
+            <div>
+              <div class="scn-title">사격·산업현장</div>
+              <div class="scn-who">충격소음·고데시벨 작업장</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: NRR 25dB+ · 충격흡수 · 멀티위치 (이중 보호 가능)</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>3M Peltor</strong> · <strong>Howard Leight</strong> · <strong>SureFire EP3</strong>
+            </div>
+            <span class="scn-tier tier-advanced">⚙️ 산업안전 인증</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>3~15만원대</strong></div>
+        </div>
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">😴</div>
+            <div>
+              <div class="scn-title">수면·집중용</div>
+              <div class="scn-who">코골이·이웃소음·층간소음</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: 부드러운 폼 또는 실리콘 · 장시간 착용 편안 · NRR 30+</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>Mack's Pillow Soft</strong> · <strong>Loop Quiet</strong> · <strong>Howard Leight Max</strong>
+            </div>
+            <span class="scn-tier tier-standard">🛏 수면 친화</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>1~5만원대</strong></div>
+        </div>
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">🏊</div>
+            <div>
+              <div class="scn-title">수영·샤워·물놀이</div>
+              <div class="scn-who">외이도염·중이염 예방</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: 100% 방수 · 실리콘 또는 왁스 · 형태 조절 가능</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>Mack's AquaBlock</strong> · <strong>Doc's ProPlugs</strong> · <strong>Speedo Biofuse</strong>
+            </div>
+            <span class="scn-tier tier-essential">💧 방수 전용</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>1~3만원대</strong></div>
+        </div>
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">🎤</div>
+            <div>
+              <div class="scn-title">강사·상담사·콜센터</div>
+              <div class="scn-who">장시간 말하기 + 주변 소음</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: 이명·과민증 예방 · 부드러운 차단 · 대화 가능 수준</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>Loop Engage</strong> · <strong>Etymotic ER25</strong>
+            </div>
+            <span class="scn-tier tier-advanced">🗣 대화 보존형</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>3~8만원대</strong></div>
+        </div>
+
+        <div class="scn-card">
+          <div class="scn-head">
+            <div class="scn-ico">✈️</div>
+            <div>
+              <div class="scn-title">비행기·여행</div>
+              <div class="scn-who">기압 변화·이충혈 예방</div>
+            </div>
+          </div>
+          <div class="scn-need"><strong>핵심</strong>: 압력 조절 필터 · 재사용 가능 · 저자극</div>
+          <div class="scn-rec">
+            <div class="scn-rec-label">🎯 추천 제품</div>
+            <div class="scn-rec-list">
+              <strong>EarPlanes</strong> · <strong>Mack's Flightguard</strong>
+            </div>
+            <span class="scn-tier tier-standard">✈️ 비행 전용</span>
+          </div>
+          <div class="scn-budget">💰 가격: <strong>1~3만원대</strong></div>
+        </div>
+
+      </div>
+
+      <div style="margin-top:24px;padding:20px 24px;background:linear-gradient(135deg,var(--c-blue-bg),var(--c-teal-bg));border-radius:var(--r-lg);">
+        <div style="font-size:14px;font-weight:800;color:var(--c-blue-d);margin-bottom:10px;">📐 NRR (Noise Reduction Rating) 이해하기</div>
+        <div style="font-size:12.5px;color:var(--c-ink-2);line-height:1.7;">
+          • <strong>NRR 15dB</strong>: 일반 음악 감상 · 미팅<br>
+          • <strong>NRR 22dB</strong>: 콘서트·라이브 클럽<br>
+          • <strong>NRR 26dB</strong>: 산업현장·잔디깎기<br>
+          • <strong>NRR 30dB+</strong>: 사격·항공기 정비·총소리<br>
+          <span style="color:var(--c-ink-3);font-size:11px;">NRR 33dB가 최대 · 실제 차단량은 표기 절반 정도로 적용 권장</span>
+        </div>
+      </div>
+
+      <!-- ⭐ 포낙 세레니티 초이스 직접 구매 (네이버 + 쿠팡) -->
+      <div style="margin-top:24px;padding:24px 26px;background:linear-gradient(135deg,#FFF8B0 0%,var(--c-coral-bg) 100%);border-radius:var(--r-lg);border:2px solid var(--c-coral);box-shadow:0 8px 24px rgba(255,107,74,.15);">
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px;">
+          <span style="display:inline-flex;align-items:center;padding:4px 10px;background:var(--c-coral);color:#fff;border-radius:999px;font-size:10.5px;font-weight:900;letter-spacing:.04em;">⭐ MyHear 추천</span>
+          <span style="font-size:11px;color:var(--c-ink-3);font-weight:700;">전 품목 정식 한국 수입 · 빠른 배송</span>
+        </div>
+        <h3 style="font-size:22px;font-weight:900;color:var(--c-ink);letter-spacing:-.02em;margin-bottom:8px;">포낙 세레니티 초이스 6종</h3>
+        <p style="font-size:13.5px;color:var(--c-ink-2);line-height:1.6;margin-bottom:16px;">
+          <strong>음악·사격·수면·일반 작업·여행·일상</strong> 6가지 용도별 청력보호 솔루션<br>
+          <span style="font-size:11.5px;color:var(--c-ink-3);">스위스 포낙(Phonak) 정식 한국 수입판 · 의료용 등급 청력보호구</span>
+        </p>
+        
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+          <a href="https://smartstore.naver.com/99eha" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;background:#03C75A;color:#fff;border-radius:12px;font-size:14px;font-weight:900;text-decoration:none;box-shadow:0 4px 12px rgba(3,199,90,.3);transition:all .2s;">
+            <span style="font-size:18px;">🟢</span>
+            <span>네이버 스마트스토어</span>
+          </a>
+          <a href="https://link.coupang.com/re/SHOPPAGESHAREVID?pageKey=A00321631&lptag=A00321631&sourceType2=brandstore_share&title=%EA%B5%AC%EA%B5%AC%EC%9C%A0%EB%9F%BD%EB%B3%B4%EC%B2%AD%EA%B8%B0&destUrl=https%3A%2F%2Fshop.coupang.com%2Fvid%2FA00321631%3Fsource%3Dbrandstore_share" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:14px;background:#FF5A5F;color:#fff;border-radius:12px;font-size:14px;font-weight:900;text-decoration:none;box-shadow:0 4px 12px rgba(255,90,95,.3);transition:all .2s;">
+            <span style="font-size:18px;">🛒</span>
+            <span>쿠팡 브랜드스토어</span>
+          </a>
+        </div>
+        <p style="font-size:11px;color:var(--c-ink-3);margin-top:12px;text-align:center;line-height:1.5;">
+          ⚠️ 쿠팡 파트너스 활동의 일환으로 일정액의 수수료를 제공받을 수 있어요
+        </p>
+      </div>
+
+      <div style="margin-top:18px;padding:14px 20px;background:var(--c-coral-bg);border-radius:var(--r);font-size:12.5px;color:var(--c-coral-d);text-align:center;">
+        💡 <strong>청력은 한 번 손상되면 회복 어려워요</strong> · 미리 보호하는 게 가장 좋은 방법
       </div>
     </div>
 
@@ -2412,7 +3080,7 @@ html, body {
           <svg aria-hidden="true"><use href="#mhLogoMark"/></svg>
           <span class="f-logo-text"><span style="font-weight:900;color:#fff;">My</span><span style="font-weight:400;font-style:italic;color:#7ED4D4;">hear</span><span style="display:inline-block;width:5px;height:5px;background:#FF6B4A;border-radius:50%;margin-left:3px;vertical-align:baseline;"></span></span>
         </div>
-        <p class="f-tag">난청 방치 평균 7년을 7분으로.<br>청각학 전공 · 15년 경력 전문가가 만든 보청기 통합 플랫폼.</p>
+        <p class="f-tag">난청 방치 평균 7년을 7분으로.<br>청각학 전공 · 15년 경력 전문가가 만든 <strong>보청기·인공와우·청력보호</strong> 통합 플랫폼.</p>
         <div class="f-contact">
           🤖 <a href="javascript:void(0)" onclick="openChat()">my24 AI 24시간 상담</a><br>
           ✉️ <a href="mailto:99hearing@gmail.com">99hearing@gmail.com</a><br>
@@ -2450,11 +3118,20 @@ html, body {
       </div>
     </div>
     <div class="f-bottom">
-      <div>© 2026 MyHear. 보청기는 의료기기 2등급입니다.</div>
+      <div>© 2026 MyHear. 보청기·인공와우는 의료기기 2등급입니다.</div>
       <div>⚖️ 6대 브랜드 중립 · 학회 표준 기반</div>
     </div>
   </div>
 </footer>
+
+<!-- 카카오 채널 친구 추가 (좌측 하단 floating) -->
+<a href="http://pf.kakao.com/_xxxxxxx" target="_blank" rel="noopener" class="kakao-channel-fab" aria-label="카카오톡 채널 친구추가">
+  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
+    <path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.86 1.93 5.36 4.78 6.7l-1.18 4.16c-.13.45.36.81.74.55l5.07-3.36c.2.01.39.02.59.02 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/>
+  </svg>
+  <span class="kakao-channel-text">카톡 친구추가 · 견적 알림</span>
+  <span class="kakao-channel-badge">+</span>
+</a>
 
 <!-- my24 챗봇 -->
 <button class="my24" onclick="openChat()" aria-label="my24 AI 상담 열기">
@@ -2476,7 +3153,7 @@ html, body {
       <button class="my24-close" onclick="closeChat()" aria-label="닫기">×</button>
     </div>
     <div class="my24-body" id="chatBody">
-      <div class="my24-msg my24-bot">안녕하세요! <strong>my24 AI 가이드</strong>예요.<br>보청기 에디터의 청각학 전공 · 15년 경력 노하우를 24시간 언제든.<br><br>아래 중 골라주시거나 직접 입력하셔도 됩니다.</div>
+      <div class="my24-msg my24-bot">👋 안녕하세요! <strong>my24 AI 상담사</strong>입니다.<br><br>보청기·인공와우·청력보호구·이명에 관한 모든 질문에 24시간 답해드려요. 청각학 전공 전문가의 15년 경력 노하우 그대로.<br><br><strong>처음이세요?</strong> 아래 버튼을 눌러주시거나, 그냥 말씀하셔도 좋아요. <strong>천천히 설명드릴게요.</strong></div>
     </div>
     <div class="my24-quick">
       <button class="my24-qr" onclick="askQ('가격이 왜 차이 나나요?')">💰 가격 차이</button>
@@ -2484,6 +3161,9 @@ html, body {
       <button class="my24-qr" onclick="askQ('어떤 브랜드가 저에게 맞나요?')">🏷 브랜드 추천</button>
       <button class="my24-qr" onclick="askQ('부모님 드릴 건데 어떻게 시작?')">👨‍👩‍👧 부모님용</button>
       <button class="my24-qr" onclick="askQ('견적 받는 방법')">🎯 견적</button>
+      <button class="my24-qr" onclick="askQ('인공와우 정보 알려주세요')">🧠 인공와우</button>
+      <button class="my24-qr" onclick="askQ('청력보호구 추천해주세요')">🛡 청력보호구</button>
+      <button class="my24-qr" onclick="askQ('이명 완화 방법 알려주세요')">👂 이명 완화</button>
     </div>
   </div>
 </div>
@@ -2664,12 +3344,15 @@ const ranks=[
   {kw:'포낙 오데오 스피어',chg:'up',val:'↑ 12'},
   {kw:'131만원 보조금 신청',chg:'up',val:'↑ 5'},
   {kw:'오티콘 인텐트',chg:'new',val:'NEW'},
+  {kw:'인공와우 수술 비용',chg:'up',val:'↑ 7'},
   {kw:'시그니아 IX 디자인',chg:'up',val:'↑ 3'},
+  {kw:'Loop 청력보호구',chg:'new',val:'NEW'},
   {kw:'보청기 가격 차이',chg:'steady',val:'—'},
+  {kw:'코클리어 N8 신모델',chg:'new',val:'NEW'},
   {kw:'리사운드 비비아',chg:'up',val:'↑ 8'},
   {kw:'청능재활 12주',chg:'down',val:'↓ 2'},
   {kw:'위덱스 얼루어',chg:'steady',val:'—'},
-  {kw:'인공와우 수술',chg:'up',val:'↑ 4'},
+  {kw:'사격 청력보호구 NRR',chg:'up',val:'↑ 4'},
   {kw:'충전식 보청기',chg:'new',val:'NEW'},
 ];
 function renderRanks(){
@@ -2781,6 +3464,27 @@ function openSignup(kind){
   document.getElementById(id).classList.add('open');
   document.body.style.overflow='hidden';
 }
+
+// ============ 카테고리 분기 - DB 비즈니스 모델 ============
+const CAT_LABELS = {
+  hearing: { title: '🎧 보청기 견적 받기', sub: '전국 센터 익명 입찰', flow: 'bidding' },
+  cochlear: { title: '🧠 인공와우 정보 받기', sub: '병원·비용·지원사업 안내', flow: 'cochlear' },
+  protection: { title: '🛡 청력보호구 추천 받기', sub: '용도별 맞춤 추천', flow: 'protection' }
+};
+function openSignupCat(category){
+  custData = {}; // 초기화
+  custData.category = category;
+  custData.flow = (CAT_LABELS[category] && CAT_LABELS[category].flow) || 'bidding';
+  // 카테고리별 헤더 라벨 변경
+  const headTitle = document.querySelector('.signup-customer .signup-head-title');
+  const headSub = document.querySelector('.signup-customer .signup-head-sub');
+  if (headTitle && CAT_LABELS[category]) {
+    headTitle.textContent = CAT_LABELS[category].title;
+    if (headSub) headSub.textContent = CAT_LABELS[category].sub + ' · 30초 클릭만으로';
+  }
+  // 모달 열기
+  openSignup('customer');
+}
 function closeSignup(kind){
   const id=kind==='customer'?'signupCustomer':'signupCenter';
   document.getElementById(id).classList.remove('open');
@@ -2826,8 +3530,60 @@ function navC(dir){
   }
 }
 function finishCust(){
-  alert('✅ 견적 신청이 접수되었어요!\n\n전국 센터가 24시간 안에 익명 입찰 제안을 드려요.\n등록한 카카오톡 또는 이메일로 알려드릴게요.\n\n(정식 백엔드 연결은 다음 업데이트 예정)');
+  // 필수 약관 동의 체크
+  const privacyAgree = document.getElementById('agreePrivacy');
+  if (privacyAgree && !privacyAgree.checked) {
+    alert('⚠️ 필수 약관(개인정보 수집·이용)에 동의해주세요.');
+    privacyAgree.focus();
+    return;
+  }
+  const marketingAgree = document.getElementById('agreeMarketing');
+  const marketingMsg = (marketingAgree && marketingAgree.checked) 
+    ? '\n💬 카톡으로 알림을 보내드릴게요.' 
+    : '';
+  
+  // 카테고리별 분기 (DB 비즈니스 모델)
+  const flow = custData.flow || 'bidding';
+  let resultMsg = '';
+  if (flow === 'cochlear') {
+    resultMsg = '✅ 인공와우 정보 신청 접수!\n\n다음을 보내드려요:\n• 인공와우 vs 보청기 비교 자료\n• 수술 가능 병원 5곳 안내\n• 비용·복지 적용 가이드\n• 코클리어·메드엘·AB 3사 자료';
+  } else if (flow === 'protection') {
+    resultMsg = '✅ 청력보호구 추천 접수!\n\n다음을 보내드려요:\n• 용도별 맞춤 제품 추천\n• 네이버·쿠팡 직접 구매 링크\n• 포낙 세레니티 초이스 안내';
+  } else {
+    resultMsg = '✅ 견적 신청이 접수되었어요!\n\n전국 센터가 24시간 안에 익명 입찰 제안을 드려요.';
+  }
+  alert(resultMsg + marketingMsg + '\n\n(정식 백엔드 연결은 다음 업데이트 예정)');
+  
   closeSignup('customer');
+  // 카테고리에 따른 다음 액션
+  if (flow === 'cochlear') {
+    setTimeout(() => {
+      document.getElementById('guide')?.scrollIntoView({behavior:'smooth',block:'start'});
+      setTimeout(() => {
+        const tabs = document.querySelectorAll('.guide-tab');
+        tabs.forEach(t => {
+          if (t.textContent.includes('인공와우')) t.click();
+        });
+      }, 600);
+    }, 400);
+  } else if (flow === 'protection') {
+    setTimeout(() => {
+      document.getElementById('guide')?.scrollIntoView({behavior:'smooth',block:'start'});
+      setTimeout(() => {
+        const tabs = document.querySelectorAll('.guide-tab');
+        tabs.forEach(t => {
+          if (t.textContent.includes('청력보호구')) t.click();
+        });
+      }, 600);
+    }, 400);
+  }
+  
+  // 헤더 라벨 원복
+  const headTitle = document.querySelector('.signup-customer .signup-head-title');
+  const headSub = document.querySelector('.signup-customer .signup-head-sub');
+  if (headTitle) headTitle.textContent = '나에게 맞는 보청기 견적 받기';
+  if (headSub) headSub.textContent = '타이핑 없이 클릭만으로 30초';
+  
   custStep=1;custData={};
   document.querySelectorAll('#signupBodyC [data-step]').forEach(el=>el.classList.remove('active'));
   document.querySelector('#signupBodyC [data-step="1"]').classList.add('active');
@@ -2837,6 +3593,8 @@ function finishCust(){
   const nextBtn=document.getElementById('sfNextC');
   nextBtn.textContent='다음';nextBtn.disabled=true;nextBtn.onclick=()=>navC(1);
   document.querySelectorAll('#signupBodyC .sq-opt.selected').forEach(b=>b.classList.remove('selected'));
+  if (privacyAgree) privacyAgree.checked = false;
+  if (marketingAgree) marketingAgree.checked = false;
 }
 
 // ============ v28 원클릭 회원가입 (센터) ============
@@ -2928,13 +3686,18 @@ setInterval(tickBids,10000);
 const TRENDS=[
   {cat:'youtube',src:'📺 YouTube',title:'포낙 오데오 스피어 Infinio 심층 리뷰 · 2025 최신',meta:'조회 42만',hot:true,ico:'🎧',url:'https://www.youtube.com/results?search_query=phonak+audeo+sphere'},
   {cat:'editor',src:'🎙 보청기 에디터',title:'이 가격에 이걸 산다고? 솔직 리뷰 · 오티콘 인텐트',meta:'조회 18만',hot:true,ico:'🎬',url:'https://www.youtube.com/@hearing_device_editor'},
+  {cat:'cochlear',src:'🧠 인공와우',title:'코클리어 N8 신모델 · MRI 호환 + 충전식 첫 출시',meta:'2024 출시',hot:true,ico:'🆕',url:'https://www.cochlear.com'},
   {cat:'global',src:'🌐 HearingTracker',title:'Best Hearing Aids of 2026 · Top 10 Reviewed',meta:'업데이트 최근',hot:false,ico:'🏆',url:'https://www.hearingtracker.com'},
   {cat:'naver',src:'📝 네이버 블로그',title:'131만원 보청기 보조금 신청 A to Z · 2026',meta:'조회 3.2만',hot:true,ico:'📋',url:'https://section.blog.naver.com/Search/Post.naver?pageNo=1&rangeType=ALL&orderBy=sim&keyword=%EB%B3%B4%EC%B2%AD%EA%B8%B0+131%EB%A7%8C%EC%9B%90'},
+  {cat:'protection',src:'🛡 청력보호구',title:'Loop Experience 콘서트용 이어플러그 · NRR 18dB 리뷰',meta:'음악가 추천',hot:true,ico:'🎵',url:'https://www.loopearplugs.com'},
   {cat:'global',src:'🌐 Hear.com',title:'OTC vs Prescription Hearing Aids · 어떻게 다른가',meta:'전문가 분석',hot:false,ico:'⚖️',url:'https://www.hear.com'},
   {cat:'editor',src:'🎙 보청기 에디터',title:'시그니아 IX 출시 정리 · 가격·스펙 총정리',meta:'조회 12만',hot:false,ico:'🆕',url:'https://www.youtube.com/@hearing_device_editor'},
+  {cat:'cochlear',src:'🧠 인공와우',title:'메드엘 Sonnet2 vs 코클리어 N7 · 어느 게 나에게 맞을까',meta:'비교 분석',hot:false,ico:'⚖️',url:'https://www.medel.com'},
   {cat:'youtube',src:'📺 YouTube',title:'청각사가 알려주는 자가검사 방법 · 5분',meta:'조회 28만',hot:false,ico:'👂',url:'https://www.youtube.com/results?search_query=%EB%B3%B4%EC%B2%AD%EA%B8%B0+%EC%9E%90%EA%B0%80%EA%B2%80%EC%82%AC'},
+  {cat:'protection',src:'🛡 청력보호구',title:'사격용 Howard Leight Impact Sport · NRR 22dB',meta:'사격 인증',hot:false,ico:'🎯',url:'https://www.howardleight.com'},
   {cat:'global',src:'🌐 HearingAdvisor',title:'2026 Hearing Aid Price Guide · US $1,000~$6,000',meta:'글로벌 가격',hot:false,ico:'💵',url:'https://www.hearingadvisor.com'},
   {cat:'naver',src:'📝 네이버 블로그',title:'보청기 부작용 줄이는 법 · 적응 팁 10가지',meta:'조회 1.8만',hot:false,ico:'💡',url:'https://section.blog.naver.com/Search/Post.naver?keyword=%EB%B3%B4%EC%B2%AD%EA%B8%B0+%EC%A0%81%EC%9D%91'},
+  {cat:'protection',src:'🛡 청력보호구',title:'수면용 Mack\'s Pillow Soft · 코골이·층간소음 방어',meta:'수면 친화',hot:false,ico:'😴',url:'https://www.macksearplugs.com'},
 ];
 function renderTrends(filter='all'){
   const list=document.getElementById('trendList');if(!list)return;
@@ -2947,7 +3710,7 @@ function renderTrends(filter='all'){
         ${t.ico}
       </div>
       <div class="trend-body">
-        <div class="trend-cat">${t.cat==='youtube'?'해외 YouTube':t.cat==='editor'?'보청기 에디터':t.cat==='naver'?'네이버 블로그':'글로벌 전문'}</div>
+        <div class="trend-cat">${t.cat==='youtube'?'해외 YouTube':t.cat==='editor'?'보청기 에디터':t.cat==='naver'?'네이버 블로그':t.cat==='cochlear'?'인공와우':t.cat==='protection'?'청력보호구':'글로벌 전문'}</div>
         <div class="trend-title">${t.title}</div>
         <div class="trend-meta">
           <span class="trend-meta-l">${t.meta}</span>
@@ -2992,13 +3755,18 @@ function setFz(size, e) {
   document.body.classList.remove('fz-small','fz-normal','fz-large','fz-xlarge');
   document.body.classList.add('fz-' + size);
   localStorage.setItem('mh_fz', size);
-  // 양쪽 토글 동기화 (PC fz-control + 모바일 mm-fz-btn)
+  // 3종 토글 동기화 (최상단 fz-tb-btn + PC fz-control + 모바일 mm-fz-btn)
   const sizes = ['small','normal','large','xlarge'];
   const idx = sizes.indexOf(size);
-  document.querySelectorAll('.fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.fz-tb-btn, .fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
   if (idx >= 0) {
+    // 최상단 바
+    const tb = document.querySelectorAll('.fz-tb-btn');
+    if (tb[idx]) tb[idx].classList.add('active');
+    // PC 우측 하단
     const ctrl = document.querySelectorAll('.fz-control button');
     if (ctrl[idx]) ctrl[idx].classList.add('active');
+    // 햄버거 메뉴
     document.querySelectorAll('.mm-fz-grid').forEach(g => {
       const btns = g.querySelectorAll('.mm-fz-btn');
       if (btns[idx]) btns[idx].classList.add('active');
@@ -3010,7 +3778,9 @@ function setFz(size, e) {
   document.body.classList.add('fz-' + saved);
   const idx = ['small','normal','large','xlarge'].indexOf(saved);
   if (idx < 0) return;
-  document.querySelectorAll('.fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.fz-tb-btn, .fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
+  const tb = document.querySelectorAll('.fz-tb-btn');
+  if (tb[idx]) tb[idx].classList.add('active');
   const ctrl = document.querySelectorAll('.fz-control button');
   if (ctrl[idx]) ctrl[idx].classList.add('active');
   document.querySelectorAll('.mm-fz-grid').forEach(g => {
