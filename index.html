@@ -775,6 +775,68 @@ html, body {
   /* 큰 글자 모드에서 sticky bottom 겹침 방지 */
   body.fz-large, body.fz-xlarge { padding-bottom: 80px !important; }
 }
+/* ============ v28 모바일 헤더 + 글자 크기 UI 정리 (FIX v2) ============ */
+
+/* 모바일 상단 헤더 압축 */
+@media (max-width: 720px) {
+  .topbar-inner { padding: 10px 12px !important; gap: 8px !important; }
+  .search-box { max-width: none !important; padding: 8px 12px !important; }
+  .search-hint { display: none !important; }
+  .nav-mobile-toggle { padding: 9px 12px !important; flex-shrink: 0; }
+  .nav-mobile-toggle #navTogLbl { display: none !important; }
+}
+
+/* 모바일에서 우측 하단 글자크기 토글 숨김 (my24와 겹침 방지) */
+@media (max-width: 720px) {
+  .fz-control { display: none !important; }
+}
+
+/* 햄버거 메뉴 안 글자 크기 카드 */
+.mm-fz-card {
+  background: linear-gradient(135deg, var(--c-blue-bg), var(--c-teal-bg));
+  border-radius: 16px;
+  padding: 18px;
+  margin-bottom: 24px;
+  border: 1px solid var(--c-line);
+}
+.mm-fz-card-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--c-blue-d);
+  margin-bottom: 4px;
+}
+.mm-fz-card-sub {
+  font-size: 11.5px;
+  color: var(--c-ink-3);
+  margin-bottom: 14px;
+  font-weight: 500;
+}
+.mm-fz-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+.mm-fz-btn {
+  padding: 14px 4px;
+  background: var(--c-white);
+  border: 1.5px solid var(--c-line);
+  border-radius: 12px;
+  font-weight: 900;
+  color: var(--c-ink-2);
+  cursor: pointer;
+  transition: all .15s;
+  font-family: inherit;
+  text-align: center;
+}
+.mm-fz-btn.active {
+  background: var(--c-blue);
+  color: #fff;
+  border-color: var(--c-blue);
+}
+.mm-fz-btn-l1 { font-size: 12px; }
+.mm-fz-btn-l2 { font-size: 14px; }
+.mm-fz-btn-l3 { font-size: 17px; }
+.mm-fz-btn-l4 { font-size: 20px; }
 </style>
 </head>
 <body>
@@ -1092,6 +1154,17 @@ html, body {
 <div class="nav-mobile-menu" id="navMenu" aria-hidden="true">
   <div class="wrap">
     <div class="mm-sec">
+      <!-- 글자 크기 조절 카드 (시니어용) -->
+    <div class="mm-fz-card">
+      <div class="mm-fz-card-title">🔤 글자 크기 조절</div>
+      <div class="mm-fz-card-sub">눈이 잘 안 보이시면 더 크게 바꿔보세요</div>
+      <div class="mm-fz-grid">
+        <button class="mm-fz-btn mm-fz-btn-l1" onclick="setFz('small',event)">가</button>
+        <button class="mm-fz-btn mm-fz-btn-l2 active" onclick="setFz('normal',event)">가</button>
+        <button class="mm-fz-btn mm-fz-btn-l3" onclick="setFz('large',event)">가</button>
+        <button class="mm-fz-btn mm-fz-btn-l4" onclick="setFz('xlarge',event)">가</button>
+      </div>
+    </div>
       <div class="mm-title">📖 처음 사는 분 필수</div>
       <a href="#guide" class="mm-link" onclick="closeNav()">보청기 선택 완전 가이드 <small>용어·브랜드·추천</small></a>
     </div>
