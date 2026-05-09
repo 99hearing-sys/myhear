@@ -745,6 +745,36 @@ body.fz-xlarge { font-size: 22px; }
   .fz-control { bottom: 80px; right: 10px; padding: 4px; }
   .fz-control button { padding: 7px 10px; min-width: 28px; }
 }
+/* ============ v28 모바일 가로 overflow 방어 + 토글 압축 (FIX) ============ */
+html, body { 
+  overflow-x: hidden !important; 
+  max-width: 100vw !important;
+}
+
+@media (max-width: 480px) {
+  .fz-control { 
+    bottom: 78px !important; 
+    right: 8px !important; 
+    padding: 3px !important; 
+    gap: 1px !important;
+  }
+  .fz-control button {
+    padding: 5px 7px !important; 
+    min-width: 22px !important;
+  }
+  .fz-control button:nth-child(1) { font-size: 9.5px !important; }
+  .fz-control button:nth-child(2) { font-size: 11px !important; }
+  .fz-control button:nth-child(3) { font-size: 13px !important; }
+  .fz-control button:nth-child(4) { font-size: 15px !important; }
+  .fz-label { display: none !important; }
+  
+  /* sticky bottom 영역 더 컴팩트 */
+  .sb { padding: 8px 10px !important; gap: 6px !important; }
+  .sb-btn { font-size: 12px !important; padding: 9px 6px !important; }
+  
+  /* 큰 글자 모드에서 sticky bottom 겹침 방지 */
+  body.fz-large, body.fz-xlarge { padding-bottom: 80px !important; }
+}
 </style>
 </head>
 <body>
