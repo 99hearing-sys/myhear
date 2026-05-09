@@ -688,6 +688,63 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;}
 .trend-footer{margin-top:20px;padding:14px 18px;background:var(--c-blue-bg);border-radius:var(--r);display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
 .trend-footer-txt{font-size:12.5px;color:var(--c-blue-d);line-height:1.5;flex:1;min-width:200px;}
 .trend-footer-txt strong{color:var(--c-blue);font-weight:800;}
+/* ============ 시니어 친화 폰트 + 글자 크기 토글 (NEW) ============ */
+/* 기본 폰트 더 크게 */
+body { font-size: 17px; line-height: 1.75; }
+@media (max-width: 720px) {
+  body { font-size: 17px; line-height: 1.8; }
+  .hero h1, h1 { font-size: clamp(28px, 7vw, 38px) !important; line-height: 1.25 !important; }
+  h2, .section-title { font-size: clamp(22px, 5.5vw, 28px) !important; }
+  p, .section-sub, .hero-sub { font-size: 16px !important; line-height: 1.75 !important; }
+  .nav-link, .mm-link { font-size: 16px !important; }
+  small { font-size: 13px !important; }
+}
+
+/* 글자 크기 토글 클래스 */
+body.fz-small { font-size: 15px; }
+body.fz-normal { font-size: 17px; }
+body.fz-large { font-size: 19px; }
+body.fz-xlarge { font-size: 22px; }
+@media (max-width: 720px) {
+  body.fz-small { font-size: 15px; }
+  body.fz-normal { font-size: 17px; }
+  body.fz-large { font-size: 20px; }
+  body.fz-xlarge { font-size: 23px; }
+}
+
+/* 우측 하단 글자 크기 토글 floating */
+.fz-control {
+  position: fixed; bottom: 90px; right: 14px; z-index: 60;
+  background: rgba(255,255,255,.96); backdrop-filter: blur(12px);
+  border: 1px solid var(--c-line); border-radius: 999px;
+  padding: 5px; display: flex; gap: 2px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.10);
+}
+.fz-control button {
+  padding: 8px 12px; border-radius: 999px;
+  font-weight: 800; color: var(--c-ink-3);
+  background: transparent; cursor: pointer;
+  font-family: inherit; transition: all .15s;
+  min-width: 32px;
+}
+.fz-control button:hover { color: var(--c-blue); }
+.fz-control button.active { background: var(--c-blue); color: #fff; }
+.fz-control button:nth-child(1) { font-size: 11px; }
+.fz-control button:nth-child(2) { font-size: 13px; }
+.fz-control button:nth-child(3) { font-size: 15px; }
+.fz-control button:nth-child(4) { font-size: 17px; }
+.fz-label {
+  position: absolute; bottom: 100%; left: 50%; transform: translateX(-50%);
+  font-size: 10.5px; font-weight: 700; color: var(--c-ink-3);
+  background: var(--c-white); padding: 3px 10px; border-radius: 999px;
+  border: 1px solid var(--c-line); margin-bottom: 4px; white-space: nowrap;
+  opacity: 0; transition: opacity .2s;
+}
+.fz-control:hover .fz-label { opacity: 1; }
+@media (max-width: 480px) {
+  .fz-control { bottom: 80px; right: 10px; padding: 4px; }
+  .fz-control button { padding: 7px 10px; min-width: 28px; }
+}
 </style>
 </head>
 <body>
@@ -2785,5 +2842,32 @@ if(savedGoal){applyGoal(savedGoal);}
 else{showWelcome();}
 </script>
 
+<!-- ============ 글자 크기 조절 토글 (NEW) ============ -->
+<div class="fz-control" role="group" aria-label="글자 크기 조절">
+  <span class="fz-label">글자 크기</span>
+  <button onclick="setFz('small',event)" aria-label="작게">가</button>
+  <button onclick="setFz('normal',event)" aria-label="보통" class="active">가</button>
+  <button onclick="setFz('large',event)" aria-label="크게">가</button>
+  <button onclick="setFz('xlarge',event)" aria-label="아주 크게">가</button>
+</div>
+<script>
+function setFz(size, e) {
+  document.body.classList.remove('fz-small','fz-normal','fz-large','fz-xlarge');
+  document.body.classList.add('fz-' + size);
+  localStorage.setItem('mh_fz', size);
+  document.querySelectorAll('.fz-control button').forEach(b => b.classList.remove('active'));
+  if (e && e.target) e.target.classList.add('active');
+}
+(function(){
+  const saved = localStorage.getItem('mh_fz') || 'normal';
+  document.body.classList.add('fz-' + saved);
+  const idx = ['small','normal','large','xlarge'].indexOf(saved);
+  const btns = document.querySelectorAll('.fz-control button');
+  if (btns.length && idx >= 0) {
+    btns.forEach(b => b.classList.remove('active'));
+    btns[idx].classList.add('active');
+  }
+})();
+</script>
 </body>
 </html>
