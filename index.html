@@ -907,6 +907,54 @@ html, body {
 /* 모바일 Hero 아래 글자 크기 안내 (사용 안 함 - 최상단 바로 대체) */
 .fz-hint-mobile { display: none !important; }
 
+/* ============ 모바일 메뉴 카테고리 3카드 (75세 친화 · 메뉴 최상단) ============ */
+.mm-cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 14px 0 20px;
+}
+.mm-cat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 18px 6px 16px;
+  background: var(--c-white);
+  border: 2.5px solid var(--c-line);
+  border-radius: 16px;
+  text-decoration: none;
+  text-align: center;
+  transition: all .2s;
+}
+.mm-cat-card.mm-cat-aid { border-color: var(--c-blue-bg); }
+.mm-cat-card.mm-cat-cochlear { border-color: var(--c-teal-bg); }
+.mm-cat-card.mm-cat-protection { border-color: var(--c-gold-bg); }
+.mm-cat-card.mm-cat-aid:active { background: var(--c-blue-bg); border-color: var(--c-blue); }
+.mm-cat-card.mm-cat-cochlear:active { background: var(--c-teal-bg); border-color: var(--c-teal); }
+.mm-cat-card.mm-cat-protection:active { background: var(--c-gold-bg); border-color: var(--c-gold); }
+.mm-cat-emoji {
+  font-size: 36px;
+  line-height: 1;
+}
+.mm-cat-card strong {
+  font-size: 14.5px;
+  font-weight: 900;
+  color: var(--c-ink);
+  letter-spacing: -.02em;
+}
+.mm-cat-card small {
+  font-size: 10.5px;
+  color: var(--c-ink-3);
+  font-weight: 500;
+}
+@media (max-width: 380px) {
+  .mm-cat-emoji { font-size: 30px; }
+  .mm-cat-card strong { font-size: 13px; }
+  .mm-cat-card small { font-size: 10px; }
+  .mm-cat-card { padding: 14px 4px 12px; }
+}
+
 /* ============ Hero 카테고리 4버튼 후킹 박스 (DB 분기 비즈니스 모델) ============ */
 .cat-pick-hero {
   margin-top: 24px;
@@ -981,73 +1029,6 @@ html, body {
   font-weight: 500;
 }
 
-/* ============ 카카오 채널 친구 추가 floating (좌측 하단) ============ */
-.kakao-channel-fab {
-  position: fixed;
-  bottom: 24px;
-  left: 24px;
-  z-index: 50;
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  padding: 13px 22px 13px 16px;
-  background: #FEE500;
-  color: #181600;
-  border-radius: 999px;
-  font-weight: 800;
-  font-size: 14px;
-  letter-spacing: -.01em;
-  box-shadow: 0 6px 20px rgba(254, 229, 0, .45), 0 2px 6px rgba(0,0,0,.08);
-  text-decoration: none;
-  transition: all .2s;
-  position: fixed;
-  border: none;
-  cursor: pointer;
-}
-.kakao-channel-fab:hover {
-  transform: translateY(-2px) scale(1.02);
-  color: #181600;
-  box-shadow: 0 10px 28px rgba(254, 229, 0, .55), 0 4px 10px rgba(0,0,0,.12);
-}
-.kakao-channel-text {
-  white-space: nowrap;
-}
-.kakao-channel-badge {
-  position: absolute;
-  top: -6px;
-  right: -6px;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  background: var(--c-coral);
-  color: #fff;
-  font-size: 12px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 2.5px solid #fff;
-  animation: pulse-coral 1.6s infinite;
-  box-shadow: 0 2px 6px rgba(255,107,74,.3);
-}
-@media (max-width: 720px) {
-  .kakao-channel-fab {
-    bottom: 80px;
-    left: 14px;
-    padding: 11px 16px 11px 12px;
-    font-size: 12.5px;
-  }
-  .kakao-channel-text {
-    max-width: 130px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-@media (max-width: 380px) {
-  .kakao-channel-fab .kakao-channel-text {
-    display: none;
-  }
-}
 
 /* ============ 사이트 최상단 글자 크기 조절 바 (시니어용 · 항상 표시) ============ */
 .fz-topbar {
@@ -1231,6 +1212,20 @@ html, body {
 
       <!-- STEP 1: 누가 쓰시나요 -->
       <div class="signup-step active" data-step="1">
+        <!-- 📲 카톡 로그인 빠른 진입 (Phase 2 Kakao Developer 연결 예정) -->
+        <button onclick="kakaoLoginPlaceholder()" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px;padding:16px;background:#FEE500;color:#181600;border:none;border-radius:12px;font-size:15px;font-weight:900;cursor:pointer;margin-bottom:10px;box-shadow:0 4px 12px rgba(254,229,0,.35);transition:all .2s;font-family:inherit;">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.86 1.93 5.36 4.78 6.7l-1.18 4.16c-.13.45.36.81.74.55l5.07-3.36c.2.01.39.02.59.02 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/></svg>
+          카톡으로 1초 시작 (자동 입력)
+        </button>
+        <p style="font-size:11px;color:var(--c-ink-3);text-align:center;margin-bottom:18px;line-height:1.5;">
+          ⓘ 카톡으로 로그인하면 이름·연락처가 자동 입력돼요<br>
+          <span style="color:var(--c-ink-3);font-size:10.5px;">(친구추가 X · 이름·연락처만 가져와 회원가입에 사용)</span>
+        </p>
+        <div style="display:flex;align-items:center;gap:10px;margin-bottom:18px;">
+          <div style="flex:1;height:1px;background:var(--c-line);"></div>
+          <span style="font-size:11px;color:var(--c-ink-3);font-weight:700;">또는 직접 입력</span>
+          <div style="flex:1;height:1px;background:var(--c-line);"></div>
+        </div>
         <h3 class="sq-title">누가 쓰실 건가요?</h3>
         <p class="sq-sub">본인이 쓰시는지, 가족분이 쓰시는지 알려주세요</p>
         <div class="sq-opts">
@@ -1323,18 +1318,15 @@ html, body {
             <div class="sd-card-row"><span class="sd-card-k">지역</span><span class="sd-card-v" id="sumRegion">-</span></div>
           </div>
           
-          <!-- 카톡 채널 친구 추가 강조 -->
-          <div style="background:linear-gradient(135deg,#FFF8B0,#FEE500);border-radius:14px;padding:16px;margin-bottom:14px;text-align:left;border:2px solid #FEE500;">
-            <div style="font-size:14px;font-weight:900;color:#181600;margin-bottom:6px;display:flex;align-items:center;gap:6px;">
-              💬 견적 도착 즉시 알림 받기
+          <!-- 견적 도착 자동 알림 (사람 응대 X) -->
+          <div style="background:linear-gradient(135deg,var(--c-blue-bg),var(--c-teal-bg));border-radius:14px;padding:16px;margin-bottom:14px;text-align:left;border:2px solid var(--c-teal);">
+            <div style="font-size:14px;font-weight:900;color:var(--c-ink);margin-bottom:6px;display:flex;align-items:center;gap:6px;">
+              📬 견적 도착 시 자동 알림
             </div>
-            <div style="font-size:12px;color:#5A4A00;margin-bottom:12px;line-height:1.5;">
-              카카오톡으로 견적이 오는 즉시 알려드려요 · 친구추가만 하시면 끝
+            <div style="font-size:12px;color:var(--c-ink-2);line-height:1.6;">
+              센터 입찰 도착 즉시 <strong>마이페이지</strong>와 <strong>이메일</strong>로 알려드려요.<br>
+              <span style="color:var(--c-ink-3);font-size:11px;">사람 상담원 X · 100% 자동 시스템 · 24시간 my24 AI 챗봇이 답변</span>
             </div>
-            <a href="http://pf.kakao.com/_xxxxxxx" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:8px;padding:13px;background:#181600;color:#FEE500;border-radius:10px;font-size:14px;font-weight:900;text-decoration:none;">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.86 1.93 5.36 4.78 6.7l-1.18 4.16c-.13.45.36.81.74.55l5.07-3.36c.2.01.39.02.59.02 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/></svg>
-              + MyHear 카톡 채널 친구추가
-            </a>
           </div>
 
           <!-- 개인정보 수집·이용 동의 (DB 합법 수집) -->
@@ -1350,7 +1342,7 @@ html, body {
               <input type="checkbox" id="agreeMarketing" style="margin-top:3px;flex-shrink:0;width:16px;height:16px;cursor:pointer;">
               <span>
                 <strong>(선택)</strong> 마케팅 정보 수신 동의 ·
-                견적 알림·신제품·보조금 안내를 카카오톡으로 받아요.
+                신제품·보조금·이벤트 안내를 이메일로 받아요.
               </span>
             </label>
           </div>
@@ -1498,12 +1490,12 @@ html, body {
       <input type="search" id="searchInput" placeholder="보청기·인공와우·청력보호·브랜드 검색" autocomplete="off">
     </div>
     <nav class="nav-desktop" aria-label="주요 메뉴">
-      <a href="#guide" class="nav-link">📖 가이드</a>
-      <a href="#bids" class="nav-link">🔥 실시간 견적</a>
-      <a href="#trends" class="nav-link">🌍 트렌드</a>
-      <a href="#shop" class="nav-link">모델 랭킹</a>
-      <a href="/support/" class="nav-link">🏥 지원사업</a>
-      <a href="#partner" class="nav-link">파트너</a>
+      <a href="#shop" class="nav-link">🎧 보청기</a>
+      <a href="javascript:void(0)" onclick="navToCategory('cochlear')" class="nav-link">🧠 인공와우</a>
+      <a href="javascript:void(0)" onclick="navToCategory('protection')" class="nav-link">🛡 청력보호구</a>
+      <a href="#bids" class="nav-link">💰 견적 받기</a>
+      <a href="/support/" class="nav-link">🏥 지원금</a>
+      <a href="#trends" class="nav-link">📰 새소식</a>
     </nav>
     <button class="nav-mobile-toggle" id="navTog" onclick="toggleNav()" aria-label="메뉴">
       <span class="hamburger"><span></span></span>
@@ -1538,19 +1530,34 @@ html, body {
         <button class="mm-fz-btn mm-fz-btn-l4" onclick="setFz('xlarge',event)">가</button>
       </div>
     </div>
-    <div class="mm-sec">
-      <div class="mm-title">📖 처음 사는 분 필수</div>
-      <a href="#guide" class="mm-link" onclick="closeNav()">보청기·인공와우·청력보호 가이드 <small>용어·브랜드·추천</small></a>
+
+    <!-- 🌟 카테고리 3개 큰 카드 (75세 친화 · 메뉴 최상단) -->
+    <div class="mm-cat-grid">
+      <a href="#shop" class="mm-cat-card mm-cat-aid" onclick="closeNav()">
+        <span class="mm-cat-emoji">🎧</span>
+        <strong>보청기</strong>
+        <small>모델·가격·견적</small>
+      </a>
+      <a href="javascript:void(0)" class="mm-cat-card mm-cat-cochlear" onclick="navToCategory('cochlear');closeNav();">
+        <span class="mm-cat-emoji">🧠</span>
+        <strong>인공와우</strong>
+        <small>병원·비용·복지</small>
+      </a>
+      <a href="javascript:void(0)" class="mm-cat-card mm-cat-protection" onclick="navToCategory('protection');closeNav();">
+        <span class="mm-cat-emoji">🛡</span>
+        <strong>청력보호구</strong>
+        <small>음악·사격·수면</small>
+      </a>
     </div>
+
     <div class="mm-sec">
-      <div class="mm-title">🔥 지금 MyHear에서</div>
+      <div class="mm-title">🔥 자동으로 빠르게</div>
       <a href="javascript:void(0)" onclick="openSignup('customer');closeNav();" class="mm-link" style="background:linear-gradient(135deg,var(--c-coral),var(--c-coral-d));color:#fff;font-weight:800;">+ 내 견적 신청 (30초) <small style="color:rgba(255,255,255,.8);">타이핑 없이 클릭만</small></a>
-      <a href="#bids" class="mm-link" onclick="closeNav()">실시간 견적 현황 <small>47건 진행 중</small></a>
-      <a href="#trends" class="mm-link" onclick="closeNav()">🌍 청각 트렌드 <small>국내외 핫이슈</small></a>
-      <a href="#live" class="mm-link" onclick="closeNav()">실시간 대시보드 <small>접속자·검색 랭킹</small></a>
+      <a href="javascript:void(0)" onclick="openChat();closeNav();" class="mm-link" style="background:linear-gradient(135deg,var(--c-blue),var(--c-teal));color:#fff;font-weight:800;">💬 my24 AI 상담 (24시간) <small style="color:rgba(255,255,255,.8);">사람 상담원 대신 즉시 답변</small></a>
+      <a href="#bids" class="mm-link" onclick="closeNav()">💰 실시간 견적 현황 <small>47건 진행 중</small></a>
     </div>
     <div class="mm-sec">
-      <div class="mm-title">🏥 지원사업</div>
+      <div class="mm-title">🏥 정부 지원금 (놓치지 마세요)</div>
       <a href="/support/" class="mm-link" onclick="closeNav()">청각장애인 지원사업 12개 <small>1분 진단으로 매칭</small></a>
       <a href="/support/#diagnose" class="mm-link" onclick="closeNav()">★ 내 케이스 진단하기 <small>익명·1분</small></a>
       <a href="/support/#det-hearing" class="mm-link" onclick="closeNav()">보청기 정부지원금 <small>5년 1회 131만원</small></a>
@@ -1558,7 +1565,8 @@ html, body {
       <a href="/support/#det-foundation" class="mm-link" onclick="closeNav()">재단 후원 4곳 비교 <small>본인부담 줄이기</small></a>
     </div>
     <div class="mm-sec">
-      <div class="mm-title">6단계 체험</div>
+      <div class="mm-title">📚 처음이세요? 차근차근</div>
+      <a href="#guide" class="mm-link" onclick="closeNav()">전체 가이드 보기 <small>용어·브랜드·추천</small></a>
       <a href="#step-1" class="mm-link" onclick="closeNav()">1. 자가 청력검사 <small>5~10분</small></a>
       <a href="#step-2" class="mm-link" onclick="closeNav()">2. 난청 시뮬레이터 <small>가족 체험</small></a>
       <a href="#step-3" class="mm-link" onclick="closeNav()">3. AI 유형 매칭 <small>3분</small></a>
@@ -1567,19 +1575,12 @@ html, body {
       <a href="#step-6" class="mm-link" onclick="closeNav()">6. 체험·구매·재활 <small>맞춤 피팅</small></a>
     </div>
     <div class="mm-sec">
-      <div class="mm-title">정보·쇼핑</div>
-      <a href="#shop" class="mm-link" onclick="closeNav()">모델 랭킹 <small>실가격 공개</small></a>
-      <a href="#fmap" class="mm-link" onclick="closeNav()">전체 기능 맵 <small>21개</small></a>
-    </div>
-    <div class="mm-sec">
-      <div class="mm-title">회사·파트너</div>
+      <div class="mm-title">📰 새소식 · 회사 정보</div>
+      <a href="#trends" class="mm-link" onclick="closeNav()">📰 청각 새소식 <small>국내외 핫이슈</small></a>
+      <a href="#live" class="mm-link" onclick="closeNav()">실시간 대시보드 <small>접속자·검색 랭킹</small></a>
       <a href="#founder" class="mm-link" onclick="closeNav()">창업자 15년 여정 <small>종로→병원→MyHear</small></a>
-      <a href="javascript:void(0)" onclick="openSignup('center');closeNav();" class="mm-link">🏪 센터 파트너 가입 <small>30초 · 가입비 0원</small></a>
-      <a href="#partner" class="mm-link" onclick="closeNav()">🏢 B2B·투자 문의 <small>이메일</small></a>
+      <a href="javascript:void(0)" onclick="openSignup('center');closeNav();" class="mm-link">🏪 센터 파트너 가입 <small>B2B · 가입비 0원</small></a>
     </div>
-    <a href="javascript:void(0)" onclick="openChat();closeNav();" class="mm-link" style="background:linear-gradient(135deg,var(--c-blue),var(--c-teal));color:#fff;justify-content:center;font-weight:700;">
-      💬 my24 AI 상담 열기
-    </a>
   </div>
 </div>
 
@@ -3124,15 +3125,6 @@ html, body {
   </div>
 </footer>
 
-<!-- 카카오 채널 친구 추가 (좌측 하단 floating) -->
-<a href="http://pf.kakao.com/_xxxxxxx" target="_blank" rel="noopener" class="kakao-channel-fab" aria-label="카카오톡 채널 친구추가">
-  <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor" aria-hidden="true">
-    <path d="M12 3C6.48 3 2 6.48 2 10.8c0 2.86 1.93 5.36 4.78 6.7l-1.18 4.16c-.13.45.36.81.74.55l5.07-3.36c.2.01.39.02.59.02 5.52 0 10-3.48 10-7.8C22 6.48 17.52 3 12 3z"/>
-  </svg>
-  <span class="kakao-channel-text">카톡 친구추가 · 견적 알림</span>
-  <span class="kakao-channel-badge">+</span>
-</a>
-
 <!-- my24 챗봇 -->
 <button class="my24" onclick="openChat()" aria-label="my24 AI 상담 열기">
   <div class="my24-pill">
@@ -3485,10 +3477,37 @@ function openSignupCat(category){
   // 모달 열기
   openSignup('customer');
 }
+
+// ============ 메뉴 카테고리 클릭 → 가이드 섹션 + 해당 탭 자동 활성화 ============
+function navToCategory(category){
+  const guideEl = document.getElementById('guide');
+  if (guideEl) {
+    guideEl.scrollIntoView({behavior:'smooth', block:'start'});
+  }
+  setTimeout(() => {
+    const tabs = document.querySelectorAll('.guide-tab, [data-guide-tab]');
+    tabs.forEach(t => {
+      const text = t.textContent || '';
+      const data = t.getAttribute('data-guide-tab') || '';
+      if (
+        (category === 'cochlear' && (text.includes('인공와우') || data.includes('cochlear'))) ||
+        (category === 'protection' && (text.includes('청력보호구') || data.includes('protection'))) ||
+        (category === 'aid' && (text.includes('보청기 입문') || text.includes('보청기 비교') || data.includes('aid')))
+      ) {
+        t.click();
+      }
+    });
+  }, 600);
+}
 function closeSignup(kind){
   const id=kind==='customer'?'signupCustomer':'signupCenter';
   document.getElementById(id).classList.remove('open');
   document.body.style.overflow='';
+}
+
+// ============ 카톡 로그인 placeholder (Phase 2 Kakao Developer 연결 예정) ============
+function kakaoLoginPlaceholder(){
+  alert('📲 카톡으로 1초 시작 (Phase 2 예정)\n\n[연결 후 동작]\n• 카톡 인증 → 이름·연락처 자동 입력\n• 카테고리·연령·청력·지역만 클릭 → 1분 완료\n• 친구추가 X · 채팅 X · DB만 자동 수집\n\n[현재 상태]\nKakao Developer 등록 + Supabase 연결 필요\n→ 다음 업데이트에서 활성화\n\n지금은 아래 단계를 직접 클릭으로 진행해주세요');
 }
 
 function selC(key,val){
@@ -3539,7 +3558,7 @@ function finishCust(){
   }
   const marketingAgree = document.getElementById('agreeMarketing');
   const marketingMsg = (marketingAgree && marketingAgree.checked) 
-    ? '\n💬 카톡으로 알림을 보내드릴게요.' 
+    ? '\n📬 신제품·보조금 소식을 이메일로 보내드려요.' 
     : '';
   
   // 카테고리별 분기 (DB 비즈니스 모델)
