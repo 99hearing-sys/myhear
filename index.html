@@ -837,6 +837,40 @@ html, body {
 .mm-fz-btn-l2 { font-size: 14px; }
 .mm-fz-btn-l3 { font-size: 17px; }
 .mm-fz-btn-l4 { font-size: 20px; }
+
+/* ============ v28 모바일 헤더 안전장치 + Hero 안내 (FIX v3) ============ */
+/* 480px 이하 추가 컴팩트 (메뉴 잘림 안전장치) */
+@media (max-width: 480px) {
+  .topbar-inner { padding: 8px 10px !important; gap: 6px !important; }
+  .nav-mobile-toggle { padding: 8px 10px !important; min-width: auto !important; }
+  .logo-text { font-size: 17px !important; }
+  .logo-mark { width: 26px !important; height: 26px !important; }
+  .search-box { padding: 7px 10px !important; min-width: 0 !important; }
+  .search-box input { font-size: 13px !important; min-width: 0 !important; }
+  .search-box input::placeholder { font-size: 13px !important; }
+  .search-box svg { width: 16px !important; height: 16px !important; }
+}
+
+/* 모바일 Hero 아래 글자 크기 안내 (햄버거 발견 유도) */
+.fz-hint-mobile { display: none; }
+@media (max-width: 720px) {
+  .fz-hint-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 14px;
+    padding: 10px 14px;
+    background: var(--c-blue-bg);
+    border-radius: 999px;
+    font-size: 12.5px;
+    color: var(--c-blue-d);
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--c-line);
+  }
+  .fz-hint-mobile:hover { background: var(--c-teal-bg); }
+}
 </style>
 </head>
 <body>
@@ -1152,8 +1186,7 @@ html, body {
 <!-- 모바일 메뉴 -->
 <div class="nav-mobile-menu" id="navMenu" aria-hidden="true">
   <div class="wrap">
-    <div class="mm-sec">
-      <!-- 글자 크기 조절 카드 (시니어용) -->
+    <!-- 글자 크기 조절 카드 (시니어용 · 햄버거 메뉴 최상단) -->
     <div class="mm-fz-card">
       <div class="mm-fz-card-title">🔤 글자 크기 조절</div>
       <div class="mm-fz-card-sub">눈이 잘 안 보이시면 더 크게 바꿔보세요</div>
@@ -1164,6 +1197,7 @@ html, body {
         <button class="mm-fz-btn mm-fz-btn-l4" onclick="setFz('xlarge',event)">가</button>
       </div>
     </div>
+    <div class="mm-sec">
       <div class="mm-title">📖 처음 사는 분 필수</div>
       <a href="#guide" class="mm-link" onclick="closeNav()">보청기 선택 완전 가이드 <small>용어·브랜드·추천</small></a>
     </div>
@@ -1235,6 +1269,7 @@ html, body {
           <div class="hero-trust-item">⚖️ 6대 브랜드 <strong>중립</strong></div>
           <div class="hero-trust-item">🏥 <strong>ISO·NAL·HINT</strong> 표준</div>
         </div>
+        <button class="fz-hint-mobile" onclick="toggleNav()">🔤 글자가 작으세요? 메뉴에서 크게 보기 →</button>
       </div>
       <div class="hero-visual reveal">
         <div class="hero-visual-inner">
@@ -2957,18 +2992,31 @@ function setFz(size, e) {
   document.body.classList.remove('fz-small','fz-normal','fz-large','fz-xlarge');
   document.body.classList.add('fz-' + size);
   localStorage.setItem('mh_fz', size);
-  document.querySelectorAll('.fz-control button').forEach(b => b.classList.remove('active'));
-  if (e && e.target) e.target.classList.add('active');
+  // 양쪽 토글 동기화 (PC fz-control + 모바일 mm-fz-btn)
+  const sizes = ['small','normal','large','xlarge'];
+  const idx = sizes.indexOf(size);
+  document.querySelectorAll('.fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
+  if (idx >= 0) {
+    const ctrl = document.querySelectorAll('.fz-control button');
+    if (ctrl[idx]) ctrl[idx].classList.add('active');
+    document.querySelectorAll('.mm-fz-grid').forEach(g => {
+      const btns = g.querySelectorAll('.mm-fz-btn');
+      if (btns[idx]) btns[idx].classList.add('active');
+    });
+  }
 }
 (function(){
   const saved = localStorage.getItem('mh_fz') || 'normal';
   document.body.classList.add('fz-' + saved);
   const idx = ['small','normal','large','xlarge'].indexOf(saved);
-  const btns = document.querySelectorAll('.fz-control button');
-  if (btns.length && idx >= 0) {
-    btns.forEach(b => b.classList.remove('active'));
-    btns[idx].classList.add('active');
-  }
+  if (idx < 0) return;
+  document.querySelectorAll('.fz-control button, .mm-fz-btn').forEach(b => b.classList.remove('active'));
+  const ctrl = document.querySelectorAll('.fz-control button');
+  if (ctrl[idx]) ctrl[idx].classList.add('active');
+  document.querySelectorAll('.mm-fz-grid').forEach(g => {
+    const btns = g.querySelectorAll('.mm-fz-btn');
+    if (btns[idx]) btns[idx].classList.add('active');
+  });
 })();
 </script>
 </body>
